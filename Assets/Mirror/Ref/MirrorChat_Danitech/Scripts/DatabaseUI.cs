@@ -49,6 +49,8 @@ public class DatabaseUI : MonoBehaviour
             sqlCommand.Connection = _dbConnection;
             sqlCommand.CommandText = query;
 
+
+
             _dbConnection.Open();
             sqlCommand.ExecuteNonQuery();
             _dbConnection.Close();

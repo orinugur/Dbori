@@ -593,6 +593,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OnSubmit_SendQuery
       objectReference: {fileID: 0}
+    - target: {fileID: 7978661148926486677, guid: 63ebb126bc7e4d94c9ea1bb68a79c4de, type: 3}
+      propertyPath: _ip
+      value: 52.79.214.143
+      objectReference: {fileID: 0}
     - target: {fileID: 8135302585800464975, guid: 63ebb126bc7e4d94c9ea1bb68a79c4de, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
