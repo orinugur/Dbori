@@ -3,8 +3,6 @@ using UnityEngine.UI;
 using MySql.Data.MySqlClient;
 using System;
 using System.Data;
-using System.Runtime.InteropServices;
-using static UnityEditor.ShaderData;
 using System.Collections.Generic;
 
 public class AccountUI : MonoBehaviour
@@ -14,7 +12,6 @@ public class AccountUI : MonoBehaviour
     [SerializeField] InputField Input_Passward;
     [SerializeField] internal Text Text_DBResult;
     [SerializeField] internal Text Text_Log;
-
 
     [Header("connectionInfo")]
     [SerializeField] string _ip = "127.0.0.1";
@@ -32,21 +29,28 @@ public class AccountUI : MonoBehaviour
     {
         this.gameObject.SetActive(false);
     }
+
     private void SendQuery(string querystr, string tableName)
     {
-        if (querystr.Contains("SELECT")) //있으면 Select 관련 함수 호출 
+        if (querystr.Contains("SELECT"))
         {
             DataSet dataSet = OnSelectRequest(querystr, tableName);
-            Text_DBResult.text = DeformatResult(dataSet);
-            Text_DBResult.gameObject.SetActive(true);
+            if (dataSet != null)
+            {
+                Text_DBResult.text = DeformatResult(dataSet);
+                Text_DBResult.gameObject.SetActive(true);
+            }
+            else
+            {
+                Text_DBResult.text = "데이터를 불러오는 중 오류가 발생했습니다.";
+                Text_DBResult.gameObject.SetActive(true);
+            }
         }
-        else //없다면 Insert 또는 Update 관련 커리
+        else
         {
             Text_DBResult.gameObject.SetActive(true);
             Text_DBResult.text = OnInsertOnUpdateRequest(querystr) ? "성공" : "실패";
         }
-        //return dataSet.GetXml().ToString();
-
     }
 
     public bool OnInsertOnUpdateRequest(string query)
@@ -67,8 +71,6 @@ public class AccountUI : MonoBehaviour
             if (Log.Contains("Duplicate"))
             {
                 Debug.Log("중복");
-                //Text_DBResult.text = "중복된 ID";
-                //Text_DBResultOb.SetActive(true);
             }
             _dbConnection.Close();
             return false;
@@ -90,6 +92,7 @@ public class AccountUI : MonoBehaviour
         }
         return resultStr;
     }
+
     public static DataSet OnSelectRequest(string query, string tableName)
     {
         try
@@ -109,31 +112,32 @@ public class AccountUI : MonoBehaviour
         catch (Exception e)
         {
             Debug.Log(e.ToString());
+            _dbConnection.Close();
             return null;
         }
     }
-    public bool ConnectDB() //데이터베이스 연결
+
+    public bool ConnectDB()
     {
         string connectStr = $"Server={_ip};Database={_dbName};Uid={_uid};Pwd={_pws};";
         Debug.Log(connectStr);
         Debug.Log("connectDB");
         try
         {
-            using (MySqlConnection conn = new MySqlConnection(connectStr))
-            {
-                _dbConnection = conn;
-                conn.Open();
-            }
-            
+            _dbConnection = new MySqlConnection(connectStr);
+            _dbConnection.Open();
             Text_Log.text = "DB 연결을 성공했습니다.";
-            
+            Text_Log.gameObject.SetActive(true);
             gameObject.SetActive(true);
+            _dbConnection.Close();
+            Debug.Log("connectDBsusekse");
             return true;
         }
         catch (Exception e)
         {
             Debug.LogWarning($"Error : {e.ToString()}");
-            Text_Log.text = "서버연결 실패.";
+            Text_Log.text = "서버 연결 실패.";
+            Debug.Log("fall");
             return false;
         }
     }
@@ -145,34 +149,23 @@ public class AccountUI : MonoBehaviour
 
     public void OnSubmit_SendQuery()
     {
-        if (_isconnectTestComplete == false)
+        if (!_isconnectTestComplete)
         {
-            Text_Log.text = "DB 연결을 먼저 시도해주세요.";
-
+            Text_DBResult.text = "DB 연결을 먼저 시도해주세요.";
             return;
         }
-        Text_Log.text = string.Empty;
-        if (Input_Id.text != string.Empty && Input_Passward.text != string.Empty) //값이 비지 않았을시에 등록을 실행
+
+        Text_DBResult.text = string.Empty;
+
+        if (!string.IsNullOrEmpty(Input_Id.text) && !string.IsNullOrEmpty(Input_Passward.text))
         {
+            //string query = "SELECT COUNT(*) FROM user_info WHERE U_Name = @UserName";
+            //SendQuery(query, "user_info");
 
-
-            string query = "SELECT COUNT(*) FROM user_info WHERE U_Name = @UserName";
-
-                SendQuery(query, "user_info");
-
-
-
-
-
-                string query2 = string.IsNullOrWhiteSpace($"INSERT INTO user_info(U_Name, U_Pass) VALUES('{Input_Id.text}', '{Input_Passward.text}')")
-                ? "SELECT U_Name, U_Pass FROM user_info" : $"INSERT INTO user_info(U_Name, U_Pass) VALUES('{Input_Id.text}', '{Input_Passward.text}')";
+            string query2 = $"INSERT INTO user_info(U_Name, U_Pass) VALUES('{Input_Id.text}', '{Input_Passward.text}')";
             SendQuery(query2, "user_info");
-            Debug.Log(query);
+            Debug.Log(query2);
         }
-
-
-
-
     }
 
     public void OnClick_OpenDatabaseUI()
@@ -184,5 +177,4 @@ public class AccountUI : MonoBehaviour
     {
         this.gameObject.SetActive(false);
     }
-
 }

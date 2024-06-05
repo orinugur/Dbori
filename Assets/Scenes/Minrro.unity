@@ -1417,7 +1417,7 @@ GameObject:
   - component: {fileID: 5936368442953680949}
   - component: {fileID: 3726834117755927334}
   m_Layer: 5
-  m_Name: Text_Error
+  m_Name: Text_accountError
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1496,12 +1496,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2763868526905275931}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9aff2d8cfb000494486aeec3dbcbaf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Input_NetworkAdress: {fileID: 0}
+  Input_NetworkAdress: {fileID: 1225219116}
   Input_UserName: {fileID: 1769387834441133982}
   Btn_StartAsHostServer: {fileID: 4298081470298568756}
   Btn_StartAsClient: {fileID: 5373144312074069319}
@@ -2481,6 +2481,10 @@ PrefabInstance:
     - target: {fileID: 3556986042420733323, guid: a0dc40807e776f448a4b91618150b242, type: 3}
       propertyPath: m_Text
       value: "\uD68C\uC6D0\uAC00\uC785"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4939557749433181249, guid: a0dc40807e776f448a4b91618150b242, type: 3}
+      propertyPath: m_Name
+      value: Text_LoginPopupError
       objectReference: {fileID: 0}
     - target: {fileID: 4949467990653291422, guid: a0dc40807e776f448a4b91618150b242, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
