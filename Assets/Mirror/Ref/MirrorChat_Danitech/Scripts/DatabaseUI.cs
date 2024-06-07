@@ -138,6 +138,10 @@ public class DatabaseUI : MonoBehaviour
         
     }
 
+  
+    
+
+
     public void OnClick_OpenDatabaseUI()
     {
         this.gameObject.SetActive(true);

@@ -106,6 +106,7 @@ public class LoginPopup : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
+
     public void OnClick_StartAsClient()
     {
         if (_netManager == null)
