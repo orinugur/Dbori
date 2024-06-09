@@ -2304,6 +2304,10 @@ PrefabInstance:
       propertyPath: minPlayers
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 655478992404740444, guid: 704ed01666fb7e9468cdbd56abda4087, type: 3}
+      propertyPath: playerPrefab
+      value: 
+      objectReference: {fileID: 1747639628974040774, guid: f1942b442a7e51047b77491c161ef44c, type: 3}
     - target: {fileID: 655478992404740445, guid: 704ed01666fb7e9468cdbd56abda4087, type: 3}
       propertyPath: m_RootOrder
       value: 6
