@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7810586818545222691}
   - component: {fileID: 7637221021765999266}
   - component: {fileID: 3361186236917117443}
+  - component: {fileID: -8532265676842392370}
   m_Layer: 0
   m_Name: BallGamePlayer
   m_TagString: Untagged
@@ -90,6 +91,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-8532265676842392370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747639628974040774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cd69c7c5064c40418e5a78fd38b8cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncDirection: 0
+  syncMode: 0
+  syncInterval: 0
+  isLeftFlipper: 0
 --- !u!1 &8631109632532248544
 GameObject:
   m_ObjectHideFlags: 0

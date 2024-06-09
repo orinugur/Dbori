@@ -576,7 +576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 77e71a36c68d83b428ea4234a91471bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.37
+      value: 9.07
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: 77e71a36c68d83b428ea4234a91471bb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1423,7 +1423,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Private
+  m_Text: "\uBC29\uC785\uC7A5"
 --- !u!222 &1447352967
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1672,6 +1672,7 @@ GameObject:
   - component: {fileID: 1824271678}
   - component: {fileID: 1824271677}
   - component: {fileID: 1824271676}
+  - component: {fileID: 1824271679}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1743,7 +1744,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1824271677}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1824271679}
+        m_TargetAssemblyTypeName: OnRoomUi, Assembly-CSharp
+        m_MethodName: OnClickEnterGameRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1824271677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1782,6 +1795,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824271674}
   m_CullTransparentMesh: 1
+--- !u!114 &1824271679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824271674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0880c7be93e669499a01bbf0bf80d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1897504366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,7 +1971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: e69649aa4d15d0849bd5eacf3965e964, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11
+      value: 9.7
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: e69649aa4d15d0849bd5eacf3965e964, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2205,7 +2230,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Host
+  m_Text: "\uBC29\uC0DD\uC131"
 --- !u!1 &247839600637148662
 GameObject:
   m_ObjectHideFlags: 0
@@ -4075,7 +4100,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 104, y: -30}
+  m_AnchoredPosition: {x: 92, y: -30}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &5140909465018841708
