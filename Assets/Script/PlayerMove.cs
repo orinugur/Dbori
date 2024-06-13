@@ -30,7 +30,7 @@ public class PlayerMove : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
-        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);    
         transform.Rotate(Vector3.up * mouseX);
 
         // 키보드 입력을 통한 캐릭터 이동
