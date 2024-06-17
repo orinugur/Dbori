@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour
     private float moveSpeed = 2f;
     public Animator animator;
     public int shell;
-    public int maxShell;
+    public int maxShell = 6;
 
     void Start()
     {
@@ -75,7 +75,7 @@ public class PlayerMove : MonoBehaviour
 
         if (isClick == 1)   // ´­·¶À» ¶§
         {
-            isFire = true;
+            GunFire();
         }
         else // ¶¿ ¶§
         {
@@ -84,12 +84,17 @@ public class PlayerMove : MonoBehaviour
     }
     void GunFire()
     {
-        if (canFire && isFire && shell > 0 && !isReload)
+        if (canFire && !isFire && shell > 0 && !isReload)
         {
-            canFire= false;
+            //canFire= false;
             //EffectManager.Instance.FireEffectGenenate(firePos.position, firePos.rotation);
             animator.SetTrigger("Fire");
             shell--;
+            Debug.Log("fire");
+        }
+        else
+        {
+            Debug.Log("cant fire");
         }
     }
     public void FireDelay()
