@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.44423652, g: 0.48750418, b: 0.5398074, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -241,6 +241,12 @@ MonoBehaviour:
   gravity: -9.81
   mouseSensitivity: 220
   cameraTransform: {fileID: 221372324}
+  isFire: 0
+  isReload: 0
+  canFire: 1
+  animator: {fileID: 0}
+  shell: 0
+  maxShell: 0
 --- !u!95 &49587966
 Animator:
   serializedVersion: 5
@@ -473,6 +479,12 @@ MonoBehaviour:
   gravity: -9.81
   mouseSensitivity: 150
   cameraTransform: {fileID: 314186092}
+  isFire: 0
+  isReload: 0
+  canFire: 1
+  animator: {fileID: 5866666021918477088}
+  shell: 0
+  maxShell: 0
 --- !u!4 &104711038
 Transform:
   m_ObjectHideFlags: 0
@@ -795,14 +807,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314186091}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.458, y: 2.62, z: -5.573}
+  m_LocalRotation: {x: -0, y: -0.024989847, z: -0, w: 0.99968773}
+  m_LocalPosition: {x: 0.93, y: 2.62, z: -5.56}
   m_LocalScale: {x: 99.999954, y: 100, z: 100.00002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 104711038}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -2.864, z: 0}
 --- !u!114 &314186093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,6 +901,38 @@ PrefabInstance:
     - target: {fileID: 1908759806999368, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
       propertyPath: m_Name
       value: SM_Wep_Revolver_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058580367667968, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.000000007629395
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058580367667968, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.045271005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058580367667968, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.079679266
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058580367667968, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058580367667968, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058580367667968, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058580367667968, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4058580367667968, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4879888146567566, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
       propertyPath: m_RootOrder
@@ -1131,7 +1175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &673815019
 Light:
   m_ObjectHideFlags: 0
@@ -5655,6 +5699,12 @@ MonoBehaviour:
   gravity: -9.81
   mouseSensitivity: 100
   cameraTransform: {fileID: 6476629261084155293}
+  isFire: 0
+  isReload: 0
+  canFire: 1
+  animator: {fileID: 0}
+  shell: 0
+  maxShell: 0
 --- !u!143 &3628075464322961330
 CharacterController:
   m_ObjectHideFlags: 0
@@ -7285,7 +7335,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342948525706347791}
-  m_LocalRotation: {x: 0.0774971, y: -0.75733817, z: 0.09603066, w: 0.6412575}
+  m_LocalRotation: {x: -0.34891438, y: -0.67662823, z: 0.43081862, w: 0.48459098}
   m_LocalPosition: {x: 0.00017566275, y: 0.0026020552, z: -0.000028990686}
   m_LocalScale: {x: 1, y: 1.0000001, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7293,7 +7343,7 @@ Transform:
   - {fileID: 2390630145465814846}
   m_Father: {fileID: 666168609062471242}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.173, y: -99.447, z: 66.584}
 --- !u!4 &5703784874483518764
 Transform:
   m_ObjectHideFlags: 0
@@ -7432,13 +7482,18 @@ Animator:
   m_GameObject: {fileID: 919132149146422240}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5425722cb5e8fac4c81c5c1dd7e4b258, type: 3}
-  m_Controller: {fileID: 9100000, guid: b60dc9aa529b314489f628aa3b57c470, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9e61729fa40ecc245ad73fa6b90fdb24, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'shoulder.R'\n\tTransform 'upper_arm.R'\n\tTransform
+    'shoulder.R'\n\tTransform 'forearm.R'\n\tTransform 'upper_arm.R'\n\tFrom animation
+    clip 'shot'\n\tFrom animation clip 'shot'\n\tFrom animation clip 'Quickdraw'\n\tFrom
+    animation clip 'UpperIdle'\n\tFrom animation clip 'Reloading'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -8374,15 +8429,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2243645052969376535}
-  m_LocalRotation: {x: -0.10026566, y: -0.71105665, z: -0.6959485, w: -0.0009504526}
-  m_LocalPosition: {x: 0.000183, y: -0.0019569767, z: 0.00068738963}
+  m_LocalRotation: {x: -0.1454397, y: -0.709481, z: -0.6879279, w: -0.047321245}
+  m_LocalPosition: {x: 0.00343, y: -0.00248, z: 0.00023}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6428112748083952106}
   m_Father: {fileID: 3699898355595729742}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -98.3, y: -77.47299, z: -94.451996}
+  m_LocalEulerAnglesHint: {x: -105.766, y: -79.604004, z: -92.36301}
 --- !u!1 &6808662592593897412
 GameObject:
   m_ObjectHideFlags: 0
