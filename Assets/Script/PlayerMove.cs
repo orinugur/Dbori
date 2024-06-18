@@ -25,12 +25,21 @@ public class PlayerMove : MonoBehaviour
     public Animator animator;
     public int shell;
     public int maxShell = 6;
+    public Camera mainCamera;
+    public GameObject bulletSell;
 
+    Ray ray;
+    RaycastHit hit;
+    Vector3 targetPoint = Vector3.zero;
+    public GameObject gun;
+    BulletSell bs;
+    public float range=100f;
     void Start()
     {
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;  // 커서 잠금
         // Cursor.visible = false;  // 커서 숨기기
+
     }
 
     void Update()
@@ -91,6 +100,24 @@ public class PlayerMove : MonoBehaviour
             animator.SetTrigger("Fire");
             shell--;
             Debug.Log("fire");
+
+            ray = mainCamera.ViewportPointToRay(Vector2.one * 0.5f);
+            if (Physics.Raycast(ray,out hit, range))
+            {
+                targetPoint = hit.point;
+            }
+            else
+            {
+                targetPoint = ray.origin + ray.direction * range;
+            }
+            Debug.DrawRay(ray.origin,ray.direction* range, Color.red);
+            Vector3 attackDirection = (targetPoint - gun.transform.position).normalized;
+            if(Physics.Raycast(gun.transform.position,attackDirection,out hit, range))
+            {
+                
+            }
+            Debug.DrawRay(gun.transform.position, attackDirection * range, Color.blue);
+            Debug.Break();
         }
         else
         {
@@ -119,6 +146,7 @@ public class PlayerMove : MonoBehaviour
             //reload.PlayOneShot(reload.clip);
             StartCoroutine(ReloadEnd());
     }
+    
     IEnumerator ReloadEnd()
     {
         yield return new WaitForSeconds(1.4f);
