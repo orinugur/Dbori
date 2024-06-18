@@ -8,6 +8,7 @@ public class BulletSell : MonoBehaviour
     Quaternion currutRotation;
     Rigidbody rb;
     public GameObject sell;
+    public float speed;
     private void Awake()
     {
         //transform.position=Vector3.zero;
@@ -31,6 +32,7 @@ public class BulletSell : MonoBehaviour
     public void ExitSell()
     {
         rb.useGravity=true;
+        rb.AddForce(Vector3.down * speed, ForceMode.Impulse);
     }
     public void InsertSell()
     {
