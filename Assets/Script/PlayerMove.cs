@@ -17,6 +17,7 @@ public class PlayerMove : MonoBehaviour
     private bool isGravityInverted = false;
     private Vector2 moveInput = Vector2.zero;
     private Vector2 moveVector = Vector2.zero;
+    
     public Transform cameraTransform;
     public bool isFire = false;
     public bool isReload = false;
@@ -26,14 +27,16 @@ public class PlayerMove : MonoBehaviour
     public int shell;
     public int maxShell = 6;
     public Camera mainCamera;
-    public GameObject bulletSell;
+    public GameObject bulletSell;   
+    
 
     Ray ray;
     RaycastHit hit;
     Vector3 targetPoint = Vector3.zero;
     public GameObject gun;
-    BulletSell bs;
     public float range=100f;
+    public GameObject Bullet;
+    public float bulletSpeed = 2000f;
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -117,7 +120,14 @@ public class PlayerMove : MonoBehaviour
                 
             }
             Debug.DrawRay(gun.transform.position, attackDirection * range, Color.blue);
-            Debug.Break();
+
+            // 총알 생성 및 발사
+            GameObject bullet = Instantiate(Bullet, gun.transform.position, Quaternion.identity);
+            Rigidbody rb = bullet.GetComponent<Rigidbody>();
+            //rb.velocity = attackDirection * bulletSpeed;
+            rb.AddForce(attackDirection*bulletSpeed,ForceMode.Impulse);
+
+            //Debug.Break();
         }
         else
         {
