@@ -27,8 +27,9 @@ public class PlayerMove : MonoBehaviour
     public int shell;
     public int maxShell = 6;
     public Camera mainCamera;
-    public GameObject bulletSell;   
-    
+    public GameObject bulletSell;
+    public GameObject Muzzle;
+    public ParticleSystem Mz;
 
     Ray ray;
     RaycastHit hit;
@@ -42,6 +43,7 @@ public class PlayerMove : MonoBehaviour
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;  // 커서 잠금
         // Cursor.visible = false;  // 커서 숨기기
+        Mz = Muzzle.GetComponent<ParticleSystem>();
 
     }
 
@@ -102,6 +104,7 @@ public class PlayerMove : MonoBehaviour
             //EffectManager.Instance.FireEffectGenenate(firePos.position, firePos.rotation);
             animator.SetTrigger("Fire");
             shell--;
+            Mz.Play();
             Debug.Log("fire");
 
             ray = mainCamera.ViewportPointToRay(Vector2.one * 0.5f);
