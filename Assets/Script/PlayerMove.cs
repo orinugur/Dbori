@@ -100,43 +100,51 @@ public class PlayerMove : MonoBehaviour
     {
         if (canFire && !isFire && shell > 0 && !isReload)
         {
-            //canFire= false;
-            //EffectManager.Instance.FireEffectGenenate(firePos.position, firePos.rotation);
             animator.SetTrigger("Fire");
             shell--;
             Mz.Play();
             Debug.Log("fire");
 
             ray = mainCamera.ViewportPointToRay(Vector2.one * 0.5f);
-            if (Physics.Raycast(ray,out hit, range))
+            if (Physics.Raycast(ray, out hit, range))
             {
-                targetPoint = hit.point;
+                // 일정 거리 이하의 충돌 무시
+                if (hit.distance >= 2f) // 여기서 2f는 최소 거리입니다. 필요에 따라 조정하세요.
+                {
+                    targetPoint = hit.point;
+                }
+                else
+                {
+                    targetPoint = ray.origin + ray.direction * range;
+                }
             }
             else
             {
                 targetPoint = ray.origin + ray.direction * range;
             }
-            Debug.DrawRay(ray.origin,ray.direction* range, Color.red);
+            Debug.DrawRay(ray.origin, ray.direction * range, Color.red);
             Vector3 attackDirection = (targetPoint - gun.transform.position).normalized;
-            if(Physics.Raycast(gun.transform.position,attackDirection,out hit, range))
+            if (Physics.Raycast(gun.transform.position, attackDirection, out hit, range))
             {
-                
+                // 일정 거리 이하의 충돌 무시
+                if (hit.distance >= 2f) // 여기서도 최소 거리 확인
+                {
+                    // 충돌 처리 로직 추가
+                }
             }
             Debug.DrawRay(gun.transform.position, attackDirection * range, Color.blue);
 
             // 총알 생성 및 발사
             GameObject bullet = Instantiate(Bullet, gun.transform.position, Quaternion.identity);
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
-            //rb.velocity = attackDirection * bulletSpeed;
-            rb.AddForce(attackDirection*bulletSpeed,ForceMode.Impulse);
-
-            //Debug.Break();
+            rb.AddForce(attackDirection * bulletSpeed, ForceMode.Impulse);
         }
         else
         {
             Debug.Log("cant fire");
         }
     }
+
     public void FireDelay()
     {
         canFire = true;
