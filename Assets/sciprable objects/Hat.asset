@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 264487bcd6f71944aa7ec892b44c6c08, type: 3}
+  m_Name: Hat
+  m_EditorClassIdentifier: 
+  itemName: Hat
+  price: 200
+  weight: 1
+  PreFab: {fileID: 9193526447336642938, guid: 00243c5575fc95c4898e6a69a17dee48, type: 3}
