@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Item>
+  <dataCategory>
+    <data DataClassName="Item_SpaceStone" Name="SpaceStone" Desc="조심히 다룰것" Price="10000" />
+    <data DataClassName="Item_GoldBar" Name="GoldBar" Desc="던질수있을거같다" Price="500" />
+    <data DataClassName="Item_Cube" Name="Cube" Desc="발판이 되어줄수도" Price="200" />
+  </dataCategory>
+</Item>

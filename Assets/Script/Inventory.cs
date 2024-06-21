@@ -8,7 +8,7 @@ using static UnityEngine.Rendering.DebugUI;
 
 public class Inventory : MonoBehaviour
 {
-    public List<Item> items;
+    //public List<Item> items;
     public Camera mainCamera;
     Ray ray;
     RaycastHit hit;
@@ -17,7 +17,7 @@ public class Inventory : MonoBehaviour
     //public List<GameObject> inventoryIndex = new List<GameObject>();
     [SerializeField]
     public GameObject[] inventoryIndex = new GameObject[5];
-    private UnityEngine.InputSystem.PlayerInput playerInput;
+    public  UnityEngine.InputSystem.PlayerInput playerInput;
 
     public string path;
     [SerializeField]
@@ -27,7 +27,7 @@ public class Inventory : MonoBehaviour
 
     public void Awake()
     {
-        items.Clear(); // 게임이 시작시 아이템 인벤토리를 클리어
+       // items.Clear(); // 게임이 시작시 아이템 인벤토리를 클리어
         inventoryIndex = new GameObject[5];
         playerInput = GetComponent<UnityEngine.InputSystem.PlayerInput>();
     }
