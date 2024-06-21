@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44381982, g: 0.49317884, b: 0.5726916, a: 1}
+  m_IndirectSpecularColor: {r: 0.44381964, g: 0.49317855, b: 0.5726909, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1508,9 +1508,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   items: []
   mainCamera: {fileID: 314186094}
-  range: 2
+  range: 30
   inventoryIndex: []
+  path: 
   selectedSlot: -1
+  inventory: {fileID: 726377857}
+  throwSpeed: 20
 --- !u!1 &117895143
 GameObject:
   m_ObjectHideFlags: 0
@@ -9971,7 +9974,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726377856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 3.43, z: 1.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
