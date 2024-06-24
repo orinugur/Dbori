@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4265088481185900147}
   - component: {fileID: 2576919987741424555}
   - component: {fileID: 6736258133795789687}
+  - component: {fileID: 6545806317019631680}
   m_Layer: 0
   m_Name: Hat
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,5 +113,18 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.035580974, y: 0.11660731, z: 0.021613987}
+  m_Size: {x: 0.2, y: 0.2, z: 0.2}
   m_Center: {x: -0.00050687505, y: 0.052383192, z: 0}
+--- !u!114 &6545806317019631680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9193526447336642938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19fedaef12717204db798e2da4375632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asdf2: {fileID: 21300000, guid: 13ba34da9011744c884f459ce4699444, type: 3}

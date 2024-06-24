@@ -44,32 +44,39 @@ public class PlayerMove : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;  // 커서 잠금
         // Cursor.visible = false;  // 커서 숨기기
         Mz = Muzzle.GetComponent<ParticleSystem>();
-
     }
 
     void Update()
     {
-        // 마우스 입력을 통한 시점 변환
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-        cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-        transform.Rotate(Vector3.up * mouseX);
-
-        MoveOrder();
-
-        // 중력 적용
-        if (controller.isGrounded && velocity.y < 0)
+        if (Input.GetKey(KeyCode.LeftAlt))
         {
-            velocity.y = -2f;
+            Cursor.lockState = CursorLockMode.None;
         }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            // 마우스 입력을 통한 시점 변환
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-        float currentGravity = isGravityInverted ? -gravity : gravity;
-        velocity.y += currentGravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+            xRotation -= mouseY;
+            xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+            cameraTransform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            transform.Rotate(Vector3.up * mouseX);
+
+            MoveOrder();
+
+            // 중력 적용
+            if (controller.isGrounded && velocity.y < 0)
+            {
+                velocity.y = -2f;
+            }
+
+            float currentGravity = isGravityInverted ? -gravity : gravity;
+            velocity.y += currentGravity * Time.deltaTime;
+            controller.Move(velocity * Time.deltaTime);
+        }
     }
 
     void OnMove(InputValue inputValue) // 이동(WASD)
