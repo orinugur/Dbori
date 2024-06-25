@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -29,7 +30,6 @@ public class Inventory : MonoBehaviour
     {
         inventoryIndex = new GameObject[5];
         inventoryImage = new Image[5];
-
         playerInput = GetComponent<UnityEngine.InputSystem.PlayerInput>();
     }
 
@@ -43,6 +43,8 @@ public class Inventory : MonoBehaviour
             inventoryImage[i].sprite = null;
             inventoryImage[i].enabled = false;
         }
+        selectedSlot = 0;
+        SelectSlot();
     }
 
     void Update()
@@ -149,33 +151,52 @@ public class Inventory : MonoBehaviour
 
             // Path 값을 기반으로 switch 문 실행
             Debug.Log(path);
-
+           
             switch (path)
             {
                 case "/Keyboard/1":
                     Debug.Log("1을 입력했습니다.");
+                    ResetSlot();
                     selectedSlot = 0;
+                    SelectSlot();
                     break;
                 case "/Keyboard/2":
                     Debug.Log("2를 입력했습니다.");
+                    ResetSlot();
                     selectedSlot = 1;
+                    SelectSlot();
                     break;
                 case "/Keyboard/3":
                     Debug.Log("3을 입력했습니다.");
+                    ResetSlot();
                     selectedSlot = 2;
+                    SelectSlot();
                     break;
                 case "/Keyboard/4":
                     Debug.Log("4을 입력했습니다.");
+                    ResetSlot(); 
                     selectedSlot = 3;
+                    SelectSlot();
                     break;
                 case "/Keyboard/5":
                     Debug.Log("5을 입력했습니다.");
+                    ResetSlot();
                     selectedSlot = 4;
+                    SelectSlot();
                     break;
                 default:
                     break;
             }
         }
+    }
+
+    void SelectSlot()
+    {
+        inventoryImage[selectedSlot].transform.parent.transform.localScale = new Vector3(1.25f, 1.25f, 1.25f);
+    }
+    private void ResetSlot ()
+    {
+        inventoryImage[selectedSlot].transform.parent.transform.localScale = Vector3.one;
     }
 
     void OnDrawGizmos()
@@ -186,6 +207,35 @@ public class Inventory : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawLine(ray.origin, ray.origin + ray.direction * range);
         }
+    }
+    void OnSelectWheel(InputValue inputValue)
+    {
+        Vector2 scrollValue = inputValue.Get<Vector2>();
+        if (scrollValue.y > 0f) //슬롯 증가
+        {
+            if(4>selectedSlot)//선택슬롯이 5보다 작을시
+            {
+                ResetSlot();
+                
+                selectedSlot++;
+                SelectSlot();
+            }
+        }
+        else if (scrollValue.y < 0f)//슬롯감소
+        {
+            if(0<selectedSlot) //선택한 슬롯이 1보다 클시
+            {
+                ResetSlot();
+                Debug.Log(selectedSlot);
+                selectedSlot--;
+                SelectSlot();
+
+            }
+        }
+        Debug.Log(inputValue.ToString());
+        Debug.Log(scrollValue);
+        Debug.Log(scrollValue.sqrMagnitude);
+        Debug.Log(scrollValue.ToString());
     }
 }
 

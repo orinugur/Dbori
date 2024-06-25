@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/ninza pengin.unity
+    guid: 0f56d3c5b706b6d4aba08a0b7c137e0d
+  - enabled: 1
     path: Assets/Scenes/mainroom.unity
     guid: ebf85245bb5bf2941b37d3a0e4eb98da
   - enabled: 1

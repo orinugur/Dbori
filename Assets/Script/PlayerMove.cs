@@ -50,6 +50,8 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        
+
         if (Input.GetKey(KeyCode.LeftAlt))
         {
             Cursor.lockState = CursorLockMode.None;
@@ -147,6 +149,7 @@ public class PlayerMove : MonoBehaviour
             GameObject bullet = Instantiate(Bullet, gun.transform.position, Quaternion.identity);
             Rigidbody rb = bullet.GetComponent<Rigidbody>();
             rb.AddForce(attackDirection * bulletSpeed, ForceMode.Impulse);
+
         }
         else
         {
