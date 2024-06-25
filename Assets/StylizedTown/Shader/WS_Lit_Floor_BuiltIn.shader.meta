@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8b607bc77fe321b409dbe441c1c19977
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Base_Color: {instanceID: 0}
+  - _Normal_Map: {instanceID: 0}
+  - Mask_Map: {instanceID: 0}
+  - _Puddle_Map: {instanceID: 0}
+  - _NormalFlat: {instanceID: 0}
+  - _texcoord: {instanceID: 0}
+  nonModifiableTextures: []
+  preprocessorOverride: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
