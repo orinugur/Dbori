@@ -189,7 +189,7 @@ public class PlayerMove : MonoBehaviour
 
     private void MoveOrder()
     {
-        moveVector = Vector2.Lerp(moveVector, moveInput * moveSpeed, Time.deltaTime * 5);
+        moveVector = Vector2.Lerp(moveVector, moveInput * moveSpeed*speed, Time.deltaTime * 5);
 
         Vector3 moveVector3 = transform.right * moveVector.x + transform.forward * moveVector.y;
         controller.Move(moveVector3 * Time.deltaTime);
