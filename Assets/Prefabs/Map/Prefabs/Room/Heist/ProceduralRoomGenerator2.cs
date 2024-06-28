@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
 
 public class ProceduralRoomGenerator2 : MonoBehaviour
@@ -10,7 +11,8 @@ public class ProceduralRoomGenerator2 : MonoBehaviour
 
     private Dictionary<GameObject, List<Transform>> roomPortals = new Dictionary<GameObject, List<Transform>>();
     private List<GameObject> generatedRooms = new List<GameObject>(); // 생성된 방들을 저장
-
+    
+    public NavMeshSurface navMeshSurface; // NavMeshSurface 컴포넌트를 할당하세요.
     void Start()
     {
         InitializeAndGenerateRooms();
@@ -29,6 +31,8 @@ public class ProceduralRoomGenerator2 : MonoBehaviour
                 ClearGeneratedRooms();
             }
         }
+
+        BakeNavMesh(); // 방 생성이 완료된 후 NavMesh를 베이크합니다.
     }
 
     void InitializeRoomPortals()
@@ -213,5 +217,16 @@ public class ProceduralRoomGenerator2 : MonoBehaviour
         }
         generatedRooms.Clear();
         roomPortals.Clear();
+    }
+    void BakeNavMesh()
+    {
+        if (navMeshSurface != null)
+        {
+            navMeshSurface.BuildNavMesh();
+        }
+        else
+        {
+            Debug.LogError("NavMeshSurface is not assigned.");
+        }
     }
 }

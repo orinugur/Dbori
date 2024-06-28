@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 3884206968257606121}
   - component: {fileID: 3884206968257606122}
   - component: {fileID: 3884206968257606123}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2665,7 +2665,7 @@ GameObject:
   - component: {fileID: 3884206968406995653}
   - component: {fileID: 3884206968406995654}
   - component: {fileID: 3884206968406995655}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Prop_Sign_Base_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2878,7 +2878,7 @@ GameObject:
   - component: {fileID: 3884206968410801556}
   - component: {fileID: 3884206968410801557}
   - component: {fileID: 3884206968410801558}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2983,7 +2983,7 @@ GameObject:
   - component: {fileID: 3884206968421381446}
   - component: {fileID: 3884206968421381447}
   - component: {fileID: 3884206968421381440}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3405,7 +3405,7 @@ GameObject:
   - component: {fileID: 3884206968948218355}
   - component: {fileID: 3884206968948218348}
   - component: {fileID: 3884206968948218349}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4520,7 +4520,7 @@ GameObject:
   - component: {fileID: 3884206968503205474}
   - component: {fileID: 3884206968503205475}
   - component: {fileID: 3884206968503205468}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Prop_Sign_Money_Bank_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5130,7 +5130,7 @@ GameObject:
   - component: {fileID: 3884206968560864798}
   - component: {fileID: 3884206968560864799}
   - component: {fileID: 3884206968560864792}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5235,7 +5235,7 @@ GameObject:
   - component: {fileID: 3884206969278600795}
   - component: {fileID: 3884206969278600788}
   - component: {fileID: 3884206969278600789}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5340,7 +5340,7 @@ GameObject:
   - component: {fileID: 3884206968987347723}
   - component: {fileID: 3884206968987347716}
   - component: {fileID: 3884206968987347717}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5551,7 +5551,7 @@ GameObject:
   - component: {fileID: 3884206968569999064}
   - component: {fileID: 3884206968569999065}
   - component: {fileID: 3884206968569999066}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Skylight_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6817,7 +6817,7 @@ GameObject:
   - component: {fileID: 3884206968607945665}
   - component: {fileID: 3884206968607945666}
   - component: {fileID: 3884206968607945667}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7111,7 +7111,7 @@ GameObject:
   - component: {fileID: 3884206968619352335}
   - component: {fileID: 3884206968619352328}
   - component: {fileID: 3884206968619352329}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Prop_Sprinkler_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7783,7 +7783,7 @@ GameObject:
   - component: {fileID: 3884206969045850063}
   - component: {fileID: 3884206969045850056}
   - component: {fileID: 3884206969045850057}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7888,7 +7888,7 @@ GameObject:
   - component: {fileID: 3884206968648897599}
   - component: {fileID: 3884206968648897592}
   - component: {fileID: 3884206968648897593}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8309,7 +8309,7 @@ GameObject:
   - component: {fileID: 3884206968659023218}
   - component: {fileID: 3884206968659023219}
   - component: {fileID: 3884206968659023212}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Prop_Sprinkler_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10106,7 +10106,7 @@ GameObject:
   - component: {fileID: 3884206968670579520}
   - component: {fileID: 3884206968670579521}
   - component: {fileID: 3884206968670579522}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11726,7 +11726,7 @@ GameObject:
   - component: {fileID: 3884206968773848180}
   - component: {fileID: 3884206968773848181}
   - component: {fileID: 3884206968773848182}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Skylight_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12067,7 +12067,7 @@ GameObject:
   - component: {fileID: 3884206968777027054}
   - component: {fileID: 3884206968777027055}
   - component: {fileID: 3884206968777027048}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Prop_Sprinkler_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13031,7 +13031,7 @@ GameObject:
   - component: {fileID: 3884206968824676869}
   - component: {fileID: 3884206968824676870}
   - component: {fileID: 3884206968824676871}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13136,7 +13136,7 @@ GameObject:
   - component: {fileID: 3884206969067954235}
   - component: {fileID: 3884206969067954228}
   - component: {fileID: 3884206969067954229}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13641,7 +13641,7 @@ GameObject:
   - component: {fileID: 3884206968857061723}
   - component: {fileID: 3884206968857061716}
   - component: {fileID: 3884206968857061717}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13956,7 +13956,7 @@ GameObject:
   - component: {fileID: 3884206968872543151}
   - component: {fileID: 3884206968872543144}
   - component: {fileID: 3884206968872543145}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15091,7 +15091,7 @@ GameObject:
   - component: {fileID: 3884206968840765951}
   - component: {fileID: 3884206968840765944}
   - component: {fileID: 3884206968840765945}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_06
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15403,7 +15403,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -16112,7 +16112,7 @@ GameObject:
   - component: {fileID: 3884206968988315956}
   - component: {fileID: 3884206968988315962}
   - component: {fileID: 3884206968988315963}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Skylight_Glass_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16409,7 +16409,7 @@ GameObject:
   - component: {fileID: 3884206969001479093}
   - component: {fileID: 3884206969001479094}
   - component: {fileID: 3884206969001479095}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18694,7 +18694,7 @@ GameObject:
   - component: {fileID: 3884206969120254588}
   - component: {fileID: 3884206969120254589}
   - component: {fileID: 3884206969120254590}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20184,7 +20184,7 @@ GameObject:
   - component: {fileID: 3884206969198778605}
   - component: {fileID: 3884206969198778606}
   - component: {fileID: 3884206969198778607}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21453,7 +21453,7 @@ GameObject:
   - component: {fileID: 3884206969248037140}
   - component: {fileID: 3884206969248037141}
   - component: {fileID: 3884206969248037142}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21959,7 +21959,7 @@ GameObject:
   - component: {fileID: 3884206969282498519}
   - component: {fileID: 3884206969282498512}
   - component: {fileID: 3884206969282498513}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22627,7 +22627,7 @@ GameObject:
   - component: {fileID: 3884206969309441005}
   - component: {fileID: 3884206969309441006}
   - component: {fileID: 3884206969309441007}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23741,7 +23741,7 @@ GameObject:
   - component: {fileID: 3884206969698972560}
   - component: {fileID: 3884206969698972561}
   - component: {fileID: 3884206969698972562}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23951,7 +23951,7 @@ GameObject:
   - component: {fileID: 3884206969980507985}
   - component: {fileID: 3884206969980507986}
   - component: {fileID: 3884206969980507987}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_09
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24560,7 +24560,7 @@ GameObject:
   - component: {fileID: 3884206969299210470}
   - component: {fileID: 3884206969299210471}
   - component: {fileID: 3884206969299210464}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25356,7 +25356,7 @@ GameObject:
   - component: {fileID: 3884206969447214998}
   - component: {fileID: 3884206969447214996}
   - component: {fileID: 3884206969447214997}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Skylight_Glass_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28506,7 +28506,7 @@ GameObject:
   - component: {fileID: 3884206969108950284}
   - component: {fileID: 3884206969108950285}
   - component: {fileID: 3884206969108950286}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29034,7 +29034,7 @@ GameObject:
   - component: {fileID: 3884206968464958418}
   - component: {fileID: 3884206968464958419}
   - component: {fileID: 3884206968464958412}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Skylight_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30315,7 +30315,7 @@ GameObject:
   - component: {fileID: 3884206969605737901}
   - component: {fileID: 3884206969605737902}
   - component: {fileID: 3884206969605737903}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31596,7 +31596,7 @@ GameObject:
   - component: {fileID: 3884206969299518962}
   - component: {fileID: 3884206969299518963}
   - component: {fileID: 3884206969299518956}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32697,7 +32697,7 @@ GameObject:
   - component: {fileID: 3884206969113511296}
   - component: {fileID: 3884206969113511297}
   - component: {fileID: 3884206969113511298}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33120,7 +33120,7 @@ GameObject:
   - component: {fileID: 3884206969759065261}
   - component: {fileID: 3884206969759065262}
   - component: {fileID: 3884206969759065263}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33331,7 +33331,7 @@ GameObject:
   - component: {fileID: 3884206968357156087}
   - component: {fileID: 3884206968357156080}
   - component: {fileID: 3884206968357156081}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33541,7 +33541,7 @@ GameObject:
   - component: {fileID: 3884206968544648810}
   - component: {fileID: 3884206968544648811}
   - component: {fileID: 3884206968544648804}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33753,7 +33753,7 @@ GameObject:
   - component: {fileID: 3884206970039673769}
   - component: {fileID: 3884206970039673770}
   - component: {fileID: 3884206970039673771}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_07
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34818,7 +34818,7 @@ GameObject:
   - component: {fileID: 3884206969857771815}
   - component: {fileID: 3884206969857771808}
   - component: {fileID: 3884206969857771809}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35986,7 +35986,7 @@ GameObject:
   - component: {fileID: 3884206970341941708}
   - component: {fileID: 3884206970341941709}
   - component: {fileID: 3884206970341941710}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36196,7 +36196,7 @@ GameObject:
   - component: {fileID: 3884206968867363592}
   - component: {fileID: 3884206968867363593}
   - component: {fileID: 3884206968867363594}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Prop_Sprinkler_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36408,7 +36408,7 @@ GameObject:
   - component: {fileID: 3884206969134117704}
   - component: {fileID: 3884206969134117705}
   - component: {fileID: 3884206969134117706}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_05
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38344,7 +38344,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -38361,7 +38361,7 @@ GameObject:
   - component: {fileID: 3884206968632582010}
   - component: {fileID: 3884206968632582011}
   - component: {fileID: 3884206968632582004}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38571,7 +38571,7 @@ GameObject:
   - component: {fileID: 3884206970017572716}
   - component: {fileID: 3884206970017572717}
   - component: {fileID: 3884206970017572718}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Ceiling_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40084,7 +40084,7 @@ GameObject:
   - component: {fileID: 3884206970096348641}
   - component: {fileID: 3884206970096348642}
   - component: {fileID: 3884206970096348643}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41138,7 +41138,7 @@ GameObject:
   - component: {fileID: 3884206970196937642}
   - component: {fileID: 3884206970196937640}
   - component: {fileID: 3884206970196937641}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Skylight_Glass_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44872,7 +44872,7 @@ GameObject:
   - component: {fileID: 3884206970127848544}
   - component: {fileID: 3884206970127848545}
   - component: {fileID: 3884206970127848546}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: SM_Env_Roof_31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45407,7 +45407,7 @@ GameObject:
   - component: {fileID: 5752214842638789822}
   - component: {fileID: 1534487021833648767}
   - component: {fileID: 2923936842858935201}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
