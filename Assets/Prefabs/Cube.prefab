@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4275641111670018061}
   - component: {fileID: -77816711533672124}
   - component: {fileID: 2705185045603709374}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -164,13 +164,13 @@ Rigidbody:
   m_GameObject: {fileID: 5780232039136709027}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 2
+  m_AngularDrag: 5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!135 &-4275641111670018061
 SphereCollider:
   m_ObjectHideFlags: 0

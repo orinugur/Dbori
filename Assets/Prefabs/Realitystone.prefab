@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3255365433023301648}
   - component: {fileID: 3255365433023301644}
   - component: {fileID: 5098651891603718634}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Realitystone
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3255365433023301651}
-  m_LocalRotation: {x: 0.06669917, y: 0.022476621, z: -0.87889636, w: -0.47179154}
+  m_LocalRotation: {x: 0.066694245, y: 0.022477487, z: -0.87889844, w: -0.47178838}
   m_LocalPosition: {x: 13.81, y: 1.87, z: 9.38}
   m_LocalScale: {x: 1.6370282, y: 1.6370282, z: 1.6370282}
   m_ConstrainProportionsScale: 0
@@ -108,13 +108,13 @@ Rigidbody:
   m_GameObject: {fileID: 3255365433023301651}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 2
+  m_AngularDrag: 5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &5098651891603718634
 MonoBehaviour:
   m_ObjectHideFlags: 0

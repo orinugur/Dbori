@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2576919987741424555}
   - component: {fileID: 6736258133795789687}
   - component: {fileID: 6545806317019631680}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hat
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -95,13 +95,13 @@ Rigidbody:
   m_GameObject: {fileID: 9193526447336642938}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 2
+  m_AngularDrag: 5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!65 &6736258133795789687
 BoxCollider:
   m_ObjectHideFlags: 0
