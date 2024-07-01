@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Unity.AI.Navigation;
 using UnityEngine;
@@ -31,10 +32,15 @@ public class ProceduralRoomGenerator2 : MonoBehaviour
                 ClearGeneratedRooms();
             }
         }
-
-        BakeNavMesh(); // 방 생성이 완료된 후 NavMesh를 베이크합니다.
+        //  BakeNavMesh(); // 방 생성이 완료된 후 NavMesh를 베이크합니다.
+        StartCoroutine(Bake());
     }
 
+    IEnumerator Bake()
+    {
+        yield return new WaitForSecondsRealtime(5f);
+        BakeNavMesh(); // 방 생성이 완료된 후 NavMesh를 베이크합니다.
+    }
     void InitializeRoomPortals()
     {
         foreach (var room in roomPrefabs)
