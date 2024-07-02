@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -21,6 +22,7 @@ public class Inventory : MonoBehaviour
     public int selectedSlot = 0; // 선택된 슬롯 번호
     public Transform inventory;
     public float throwSpeed;
+    private bool inBox;
 
     public Image[] inventoryImage;
     private Vector3 rayStart;
@@ -68,6 +70,7 @@ public class Inventory : MonoBehaviour
 
         // 첫 번째로 히트한 "Item" 태그를 가진 오브젝트를 찾습니다.
         GameObject hitItem = null;
+        GameObject Box=null;
         foreach (RaycastHit hit in hits)
         {
             if (hit.transform.tag == "Item")
@@ -79,30 +82,60 @@ public class Inventory : MonoBehaviour
 
         if (inventoryIndex[selectedSlot] != null) // 선택된 슬롯이 비어있지 않은 경우
         {
-            // 아이템의 부모를 해제하고 독립 객체로 만듦
-            GameObject item = inventoryIndex[selectedSlot];
-            item.transform.SetParent(null);
-            item.SetActive(true);
-            inventoryImage[selectedSlot].sprite = null; // 해당 슬롯의 이미지를 Null로 만듦
-            inventoryImage[selectedSlot].enabled = false;
+            RaycastHit[] hits2 = Physics.RaycastAll(ray, range, layerMask);
+            foreach (RaycastHit hit in hits)
+            {
+                if (hit.transform.tag == "Box")
+                {
+                    Box = hit.transform.gameObject;
+                    inBox = true;
+                    break;
+                }
+            }
 
-            // Ray를 쏜 지점의 트랜스폼에 해당 물건을 놓음
-            //if (hitItem != null)
-            //{
-            //    Vector3 point = (hit.point - item.transform.position).normalized;
-            //    Rigidbody rd = item.GetComponent<Rigidbody>();
-            //    rd.AddForce(point * throwSpeed, ForceMode.Impulse);
-            //    Debug.Log($"Item placed at {hit.point}");
-            //    Debug.Log($"Item placed at {hitItem.name}");
-            //}
-            //else
-            //{
+            if(inBox)
+            {
+                GameObject item = inventoryIndex[selectedSlot];
+                //아이템을 박스의 자식으로 둠
+                item.transform.SetParent(Box.transform);
+                item.transform.position= Box.transform.position;
+                item.SetActive(true);
+                //item.transform.localScale = item.transform.localScale * 0.5f; //크기를 반으로 줄인다
+                inventoryImage[selectedSlot].sprite = null; // 해당 슬롯의 이미지를 Null로 만듦
+                inventoryImage[selectedSlot].enabled = false;
+                inventoryIndex[selectedSlot] = null; // 슬롯 비우기
+                inBox=false;
+            }
+            else
+            {
+                GameObject item = inventoryIndex[selectedSlot];
+
+                // 아이템의 부모를 해제하고 독립 객체로 만듦
+                //GameObject item = inventoryIndex[selectedSlot];
+                item.transform.SetParent(null);
+                item.SetActive(true);
+                inventoryImage[selectedSlot].sprite = null; // 해당 슬롯의 이미지를 Null로 만듦
+                inventoryImage[selectedSlot].enabled = false;
+
+                // Ray를 쏜 지점의 트랜스폼에 해당 물건을 놓음
+                //if (hitItem != null)
+                //{
+                //    Vector3 point = (hit.point - item.transform.position).normalized;
+                //    Rigidbody rd = item.GetComponent<Rigidbody>();
+                //    rd.AddForce(point * throwSpeed, ForceMode.Impulse);
+                //    Debug.Log($"Item placed at {hit.point}");
+                //    Debug.Log($"Item placed at {hitItem.name}");
+                //}
+                //else
+                //{
                 Vector3 point = ray.direction.normalized;
                 Rigidbody rd = item.GetComponent<Rigidbody>();
                 rd.velocity = Vector3.zero;
                 rd.AddForce(point * throwSpeed, ForceMode.Impulse);
-            //}
-            inventoryIndex[selectedSlot] = null; // 슬롯 비우기
+                //}
+                inventoryIndex[selectedSlot] = null; // 슬롯 비우기
+            }
+           
         }
         else // 선택된 슬롯이 비어있는 경우
         {
