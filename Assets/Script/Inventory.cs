@@ -35,7 +35,7 @@ public class Inventory : MonoBehaviour
 
     public void Start()
     {
-        inventory=transform.GetChild(0);
+        inventory=transform.GetChild(2);
         GameObject inventoryUI = GameObject.Find("InventoryUi");
         for (int i = 0; i < inventoryImage.Length; i++)
         {

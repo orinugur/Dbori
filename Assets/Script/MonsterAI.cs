@@ -10,6 +10,7 @@ public class MonsterAI : MonoBehaviour
     public bool isAtk;
     public MeleeAtk MeleeAtk;
     public TrailRenderer atkEp;
+    public float speed;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -25,6 +26,9 @@ public class MonsterAI : MonoBehaviour
         if (player != null)
         {
             agent.SetDestination(player.position);
+            speed = agent.velocity.magnitude;
+            animator.SetFloat("Speed", speed);
+
         }
         else
         {
