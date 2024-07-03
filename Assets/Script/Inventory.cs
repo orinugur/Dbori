@@ -100,6 +100,8 @@ public class Inventory : MonoBehaviour
                 item.transform.SetParent(Box.transform);
                 item.transform.position= Box.transform.position;
                 item.SetActive(true);
+                item.tag = "InBox";
+                item.layer = 10;
                 //item.transform.localScale = item.transform.localScale * 0.5f; //크기를 반으로 줄인다
                 inventoryImage[selectedSlot].sprite = null; // 해당 슬롯의 이미지를 Null로 만듦
                 inventoryImage[selectedSlot].enabled = false;
