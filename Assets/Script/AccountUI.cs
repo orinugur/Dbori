@@ -22,10 +22,10 @@ public class AccountUI : MonoBehaviour
     [SerializeField] GameObject room_UI;
 
     [Header("connectionInfo")]
-    [SerializeField] string _ip = "127.0.0.1";
-    [SerializeField] string _dbName = "test";
-    [SerializeField] string _uid = "root";
-    [SerializeField] string _pws = "1234";
+    [SerializeField] string _ip ;
+    [SerializeField] string _dbName;
+    [SerializeField] string _uid ;
+    [SerializeField] string _pws;
 
     List<string> DB_UserName;
 
@@ -37,7 +37,13 @@ public class AccountUI : MonoBehaviour
     {
         this.gameObject.SetActive(false);
     }
-
+    private void Start()
+    {
+        _ip = DBManager.Instance._ip;
+        _dbName = DBManager.Instance._dbName;
+        _uid = DBManager.Instance._uid;
+        _pws = DBManager.Instance._pws;
+    }
     private void SendQuery(string querystr, string tableName)
     {
         if (querystr.Contains("SELECT"))
@@ -230,11 +236,37 @@ public class AccountUI : MonoBehaviour
         {
             if (!string.IsNullOrEmpty(logInput_Id.text) && !string.IsNullOrEmpty(logInput_Passward.text))
             {
-                string query = $"SELECT COUNT(1) FROM user_info WHERE U_Name= '{logInput_Id.text}' AND U_Pass= '{logInput_Passward.text}'";
-                bool loginSuccess = OnLoginRequest(query);
-                Text_Log.text = loginSuccess ? "성공" : "실패";
-                Text_Log.gameObject.SetActive(true);
-                Debug.Log(loginSuccess ? "로그인 성공" : "로그인 실패");
+                string query = $"SELECT U_Num FROM user_info WHERE U_Name= @UserName AND U_Pass= @Password";
+                MySqlCommand sqlCommand = new MySqlCommand(query, _dbConnection);
+                sqlCommand.Parameters.AddWithValue("@UserName", logInput_Id.text);
+                sqlCommand.Parameters.AddWithValue("@Password", logInput_Passward.text);
+
+                try
+                {
+                    _dbConnection.Open();
+                    object result = sqlCommand.ExecuteScalar();
+                    _dbConnection.Close();
+
+                    if (result != null)
+                    {
+                        int userNum = Convert.ToInt32(result);
+                        GameManager.Instance.SetUserNum(userNum); // 싱글톤 GameManager에 U_Num 저장
+                        Text_Log.text = "로그인 성공";
+                        room_UI.SetActive(true);
+                    }
+                    else
+                    {
+                        Text_Log.text = "로그인 실패";
+                    }
+                    Text_Log.gameObject.SetActive(true);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogWarning($"Error : {e.ToString()}");
+                    _dbConnection.Close();
+                    Text_Log.text = "로그인 중 오류 발생";
+                    Text_Log.gameObject.SetActive(true);
+                }
             }
             else
             {

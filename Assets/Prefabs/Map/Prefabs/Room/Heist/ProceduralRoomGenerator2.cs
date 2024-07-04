@@ -38,8 +38,9 @@ public class ProceduralRoomGenerator2 : MonoBehaviour
 
     IEnumerator Bake()
     {
-        yield return new WaitForSecondsRealtime(5f);
+        yield return new WaitForSecondsRealtime(1f);
         BakeNavMesh(); // 방 생성이 완료된 후 NavMesh를 베이크합니다.
+   
     }
     void InitializeRoomPortals()
     {
