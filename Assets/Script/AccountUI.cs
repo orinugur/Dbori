@@ -230,22 +230,20 @@ public class AccountUI : MonoBehaviour
     }
 
 
-    public void OnClickLogin()
-    {
-        if (ConnectLogin())
+        public void OnClickLogin()
         {
-            if (!string.IsNullOrEmpty(logInput_Id.text) && !string.IsNullOrEmpty(logInput_Passward.text))
+            if (DBManager.Instance.ConnectLogin())
             {
-                string query = $"SELECT U_Num FROM user_info WHERE U_Name= @UserName AND U_Pass= @Password";
-                MySqlCommand sqlCommand = new MySqlCommand(query, _dbConnection);
-                sqlCommand.Parameters.AddWithValue("@UserName", logInput_Id.text);
-                sqlCommand.Parameters.AddWithValue("@Password", logInput_Passward.text);
-
-                try
+                if (!string.IsNullOrEmpty(logInput_Id.text) && !string.IsNullOrEmpty(logInput_Passward.text))
                 {
-                    _dbConnection.Open();
-                    object result = sqlCommand.ExecuteScalar();
-                    _dbConnection.Close();
+                    string query = "SELECT U_Num FROM user_info WHERE U_Name=@UserName AND U_Pass=@Password";
+                    Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@UserName", logInput_Id.text },
+                    { "@Password", logInput_Passward.text }
+                };
+
+                    object result = DBManager.Instance.ExecuteScalarQuery(query, parameters);
 
                     if (result != null)
                     {
@@ -260,26 +258,22 @@ public class AccountUI : MonoBehaviour
                     }
                     Text_Log.gameObject.SetActive(true);
                 }
-                catch (Exception e)
+                else
                 {
-                    Debug.LogWarning($"Error : {e.ToString()}");
-                    _dbConnection.Close();
-                    Text_Log.text = "로그인 중 오류 발생";
+                    Debug.Log("아이디와 비밀번호를 다시 입력하세요.");
+                    Text_Log.text = "아이디와 비밀번호를 다시 입력하세요.";
                     Text_Log.gameObject.SetActive(true);
                 }
             }
             else
             {
-                Debug.Log("아이디와 비밀번호를 다시 입력하세요.");
+                Debug.Log("데이터베이스 연결 실패");
+                Text_Log.text = "데이터베이스 연결 실패";
+                Text_Log.gameObject.SetActive(true);
             }
         }
-        else
-        {
-            Debug.Log("데이터베이스 연결 실패");
-        }
-    }
 
-    public bool OnLoginRequest(string query)
+        public bool OnLoginRequest(string query)
     {
         try
         {

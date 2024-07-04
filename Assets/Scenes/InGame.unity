@@ -14556,7 +14556,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19fedaef12717204db798e2da4375632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asdf2: {fileID: 21300000, guid: 1e25200d9cbab3e4da06a10f0269d2fd, type: 3}
+  Image: {fileID: 0}
+  DataClassName: 
+  Price: 0
 --- !u!1 &1048709514 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011480211905, guid: 146c5256fc521374c91ca33fc98e9603, type: 3}
@@ -17460,7 +17462,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19fedaef12717204db798e2da4375632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asdf2: {fileID: 21300000, guid: 3227f30da8fd3384bade464d686eed6f, type: 3}
+  Image: {fileID: 0}
+  DataClassName: 
+  Price: 0
 --- !u!4 &1253628090
 Transform:
   m_ObjectHideFlags: 0
@@ -26828,6 +26832,10 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2705185045603709374, guid: 9f20e83dd1e6d5147872ec2c88a73b18, type: 3}
+      propertyPath: Image
+      value: 
+      objectReference: {fileID: 21300000, guid: 495b6aee2d15dc5489e66f16cb602033, type: 3}
     - target: {fileID: 4306267361089011432, guid: 9f20e83dd1e6d5147872ec2c88a73b18, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -30035,6 +30043,10 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6545806317019631680, guid: 00243c5575fc95c4898e6a69a17dee48, type: 3}
+      propertyPath: Image
+      value: 
+      objectReference: {fileID: 21300000, guid: 1e25200d9cbab3e4da06a10f0269d2fd, type: 3}
     - target: {fileID: 8720009634648267550, guid: 00243c5575fc95c4898e6a69a17dee48, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -30128,6 +30140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spaceSton
       objectReference: {fileID: 0}
+    - target: {fileID: 3615647322314845929, guid: 374256a0890d0444ba5f5cd03d03fd17, type: 3}
+      propertyPath: Image
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b7a245b77abd0f43bcc45ec73985254, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30324,6 +30340,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 123.64
       objectReference: {fileID: 0}
+    - target: {fileID: 5098651891603718634, guid: 69108fdfb339e72479309dc486b233d8, type: 3}
+      propertyPath: Image
+      value: 
+      objectReference: {fileID: 21300000, guid: 9a4f4c8a0e3415342b7655e216693d04, type: 3}
     - target: {fileID: 7261327600281428595, guid: 69108fdfb339e72479309dc486b233d8, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -30357,6 +30377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NightVision
       objectReference: {fileID: 0}
+    - target: {fileID: 5420581914854980823, guid: e56c99252a6171c4db678f6dda01e9e9, type: 3}
+      propertyPath: Image
+      value: 
+      objectReference: {fileID: 21300000, guid: f75b182f1a99b32479370f97f5dba4a6, type: 3}
     - target: {fileID: 6160004106264043626, guid: e56c99252a6171c4db678f6dda01e9e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.91
@@ -31256,6 +31280,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3929716851743800150, guid: e295dc384727397418471a4ee2d19d0b, type: 3}
+      propertyPath: Image
+      value: 
+      objectReference: {fileID: 21300000, guid: 4d640e193b0898e42a3b8dc2fc79510d, type: 3}
     - target: {fileID: 7050049905122339713, guid: e295dc384727397418471a4ee2d19d0b, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -31288,8 +31316,8 @@ SceneRoots:
   - {fileID: 7050049905281985089}
   - {fileID: 3255365433353004478}
   - {fileID: 1918051521}
+  - {fileID: 3390681055249119373}
   - {fileID: 1253628090}
   - {fileID: 712741038}
   - {fileID: 1704676347}
   - {fileID: 1980341338}
-  - {fileID: 3390681055249119373}

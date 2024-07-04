@@ -28,6 +28,7 @@ public class Inventory : MonoBehaviour
     private Vector3 rayStart;
     private Vector3 rayEnd;
 
+    public InBox inBoxScript;
     public void Awake()
     {
         inventoryIndex = new GameObject[5];
@@ -88,6 +89,9 @@ public class Inventory : MonoBehaviour
                 if (hit.transform.tag == "Box")
                 {
                     Box = hit.transform.gameObject;
+                    
+                    int price = inventoryIndex[selectedSlot].GetComponent<ItemS>().Price;
+                    Box.GetComponent<InBox>().InsertBox(price);
                     inBox = true;
                     break;
                 }
@@ -153,7 +157,7 @@ public class Inventory : MonoBehaviour
                         hitItem.transform.rotation= Quaternion.Euler(0f, 0f, 0f);
                         hitItem.SetActive(false);
                         Debug.Log($"Item added to slot {selectedSlot + 1}");
-                        inventoryImage[selectedSlot].sprite = hitItem.GetComponent<ItemS>().asdf2;
+                        inventoryImage[selectedSlot].sprite = hitItem.GetComponent<ItemS>().Image;
                         inventoryImage[selectedSlot].enabled = true;
                     }
                     else
