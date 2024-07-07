@@ -9,7 +9,7 @@ public class ItemS : MonoBehaviour
     public Sprite Image;
     public string DataClassName;
     public int Price;
-
+    public bool UseBles;
     public void Start()
     {
         getPrice(); 
@@ -19,6 +19,7 @@ public class ItemS : MonoBehaviour
         DataClassName = Image.name;
         Debug.Log(DataClassName);
         GetTooltip(DataClassName);
+
     }
 
     public void GetTooltip(string itemClassName)
@@ -27,6 +28,16 @@ public class ItemS : MonoBehaviour
         if (itemData == null)
             return;
         Price=itemData.Price;
+        if(itemData.UsaBle > 0)
+        {
+            UseBles=true;
+        }
+        else
+        {
+            UseBles= false;
+        }
     }
+
+
 }
 
