@@ -5,6 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class Inventory : MonoBehaviour
 {
@@ -228,7 +229,59 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+    private void OnUse(InputValue value)
+    {
+        bool use = false;
+        ItemS item = null;
+        if (inventoryIndex[selectedSlot] != null)  // 선택된 슬롯에 아이템이 있는지 확인
+        {
+            item = inventoryIndex[selectedSlot].GetComponent<ItemS>();  // Item 컴포넌트 가져오기
+            if (item != null)  // Item 컴포넌트가 있는지 확인
+            {
+                use = item.UseBles;  // UseBles 속성 값 가져오기
+                Debug.Log("UseBles 값: " + use);  // 값 출력
+            }
+            else
+            {
+                return;
+            }
+        }
+        if (use)
+        {
+            switch (item.DataClassName)
+            {
+                case "Item_Tobacco":
+                    UseTabacco();
+                    break;
+                case "Item_NightVision":
+                    UseNightVision();
+                    break;
 
+                    default :
+                    break;
+            }
+        }
+    }
+
+    void UseTabacco()
+    {
+        UseItem();
+        //타바코 사용효과
+    }
+    void UseNightVision()
+    {
+        UseItem();
+        //나이트비전 사용효과
+    }
+    void UseItem()
+    {
+        GameObject item = inventoryIndex[selectedSlot];
+        item.transform.SetParent(null);
+        item.SetActive(false);
+        inventoryImage[selectedSlot].sprite = null; // 해당 슬롯의 이미지를 Null로 만듦
+        inventoryImage[selectedSlot].enabled = false;//해당아이템 이미지 비활성화
+        inventoryIndex[selectedSlot] = null; // 슬롯 비우기
+    }
     void SelectSlot()
     {
         inventoryImage[selectedSlot].transform.parent.transform.localScale = new Vector3(1.25f, 1.25f, 1.25f);
