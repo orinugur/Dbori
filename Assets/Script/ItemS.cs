@@ -10,6 +10,7 @@ public class ItemS : MonoBehaviour
     public string DataClassName;
     public int Price;
     public bool UseBles;
+    public int UsaBles;
     public void Start()
     {
         getPrice(); 
@@ -28,7 +29,8 @@ public class ItemS : MonoBehaviour
         if (itemData == null)
             return;
         Price=itemData.Price;
-        if(itemData.UsaBle > 0)
+        UsaBles = itemData.Usable;
+        if(itemData.Usable > 0)
         {
             UseBles=true;
         }

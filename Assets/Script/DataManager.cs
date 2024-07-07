@@ -14,8 +14,8 @@ public class DataManager : Singleton<DataManager>
 
 
 
-    private readonly string _dataRootPath = "C:/Users/KGA/Desktop/DataParser";
-    //private readonly string _dataRootPath = "C:/Users/YSR/Desktop/DataParser"; 
+    //private readonly string _dataRootPath = "C:/Users/KGA/Desktop/DataParser";
+    private readonly string _dataRootPath = "C:/Users/YSR/Desktop/DataParser"; 
 
 
     private void Awake()
@@ -181,7 +181,7 @@ public class DataManager : Singleton<DataManager>
             tempItem.Name = data.Attribute(nameof(tempItem.Name)).Value;
             tempItem.Desc = data.Attribute(nameof(tempItem.Desc)).Value;
             tempItem.Price = int.Parse(data.Attribute(nameof(tempItem.Price)).Value);
-            tempItem.UsaBle = int.Parse(data.Attribute(nameof(tempItem.UsaBle)).Value);
+            tempItem.Usable = int.Parse(data.Attribute(nameof(tempItem.Usable)).Value);
             //tempItem.DamageMultiSkillLevelName = float.Parse(data.Attribute(nameof(tempItem.DamageMultiSkillLevelName)).Value);
             //tempItem.IconName = data.Attribute(nameof(tempItem.IconName)).Value;
             //string skillNameListStr = data.Attribute(nameof(tempItem.Desc)).Value;
