@@ -7,7 +7,9 @@ public class InBox : MonoBehaviour
 {
     public int Price;
     public int U_Num;
-
+    public Animator Ani;
+    public GameObject player;
+    public GameObject playerPos;
     void Start()
     {
         Price = 0;
@@ -21,10 +23,15 @@ public class InBox : MonoBehaviour
         Price += price;
     }
 
-    public void ExitSuccess()
+    public void ExitSuccess(GameObject player)
     {
+        Ani.SetTrigger("Exit");
         GameManager.Instance.price = Price;
         DBManager.Instance.UpdateMoney(U_Num, Price);
+        //player = GameObject.FindWithTag("Player");
+        player.GetComponent<CharacterController>().enabled = false;
+        player.transform.SetParent(playerPos.transform);
+        player.transform.position = playerPos.transform.position;
     }
     public void ExitFail()
     {
@@ -33,9 +40,6 @@ public class InBox : MonoBehaviour
     }
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            ExitSuccess();
-        }
+
     }
 }
