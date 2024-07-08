@@ -14,8 +14,8 @@ public class DataManager : Singleton<DataManager>
 
 
 
-    //private readonly string _dataRootPath = "C:/Users/KGA/Desktop/DataParser";
-    private readonly string _dataRootPath = "C:/Users/YSR/Desktop/DataParser"; 
+    private readonly string _dataRootPath = "C:/Users/KGA/Desktop/DataParser";
+    //private readonly string _dataRootPath = "C:/Users/YSR/Desktop/DataParser"; 
 
 
     private void Awake()

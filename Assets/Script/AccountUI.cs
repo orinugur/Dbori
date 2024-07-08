@@ -237,7 +237,7 @@ public class AccountUI : MonoBehaviour
                 if (!string.IsNullOrEmpty(logInput_Id.text) && !string.IsNullOrEmpty(logInput_Passward.text))
                 {
                     string query = "SELECT U_Num FROM user_info WHERE U_Name=@UserName AND U_Pass=@Password";
-                    Dictionary<string, object> parameters = new Dictionary<string, object>
+                Dictionary<string, object> parameters = new Dictionary<string, object>
                 {
                     { "@UserName", logInput_Id.text },
                     { "@Password", logInput_Passward.text }

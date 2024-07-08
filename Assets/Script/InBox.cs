@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,26 +6,36 @@ using UnityEngine;
 public class InBox : MonoBehaviour
 {
     public int Price;
+    public int U_Num;
 
     void Start()
     {
         Price = 0;
+        GameManager.Instance.price = 0;
+        U_Num= GameManager.Instance.U_Num;
+        //게임시작시 금액을 리셋
     }
 
     public void InsertBox(int price)
     {
         Price += price;
-
     }
 
     public void ExitSuccess()
     {
         GameManager.Instance.price = Price;
-
+        DBManager.Instance.UpdateMoney(U_Num, Price);
     }
     public void ExitFail()
     {
         GameManager.Instance.price = 0;
 
+    }
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitSuccess();
+        }
     }
 }
