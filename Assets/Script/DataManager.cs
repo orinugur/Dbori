@@ -14,9 +14,17 @@ public class DataManager : Singleton<DataManager>
 
 
 
-    private readonly string _dataRootPath = "C:/Users/KGA/Desktop/DataParser";
+    //private readonly string _dataRootPath = "C:/Users/KGA/Desktop/DataParser";
+    private readonly string _dataRootPath = "MirrorMirrorOnTheWall_Data/Resources";
     //private readonly string _dataRootPath = "C:/Users/YSR/Desktop/DataParser"; 
-
+    public DataManager()
+    {
+#if DEBUG
+        _dataRootPath = "C:/Users/YSR/Desktop/DataParser";
+#else
+        _dataRootPath = $"{Application.dataPath}/Resources";
+#endif
+    }
 
     private void Awake()
     {
