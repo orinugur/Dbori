@@ -78,7 +78,7 @@ public class RoomManager : Singleton<RoomManager>
         }
 
         yield return new WaitForSecondsRealtime(1f);
-        LoadScene("Result");
+        LoadScene("ExitFail");
     }
 
     public IEnumerator FadeOutVignette()

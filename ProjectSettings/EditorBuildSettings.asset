@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Result.unity
     guid: 5a230787259810b41827326593675a71
+  - enabled: 1
+    path: Assets/Scenes/ExitFail.unity
+    guid: af371591ca743604a8e4c8240566ae0a
   m_configObjects: {}

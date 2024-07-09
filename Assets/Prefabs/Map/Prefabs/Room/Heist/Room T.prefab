@@ -751,7 +751,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2750872538699992524}
   - {fileID: 4849157812727622317}
   - {fileID: 4119009175732616024}
   - {fileID: 752486443905682274}
@@ -47511,6 +47510,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48dd59845eae74341b67ca41271f6bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
+  minItems: 1
+  maxItems: 10
+  maxAttempts: 100
 --- !u!1001 &858948559984045402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50107,6 +50110,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48dd59845eae74341b67ca41271f6bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
+  minItems: 1
+  maxItems: 10
+  maxAttempts: 100
 --- !u!1001 &3544773612526121664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51680,68 +51687,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 467438, guid: 1d6663b59c83df446b8c51df1ccb0042, type: 3}
   m_PrefabInstance: {fileID: 3884206970325725061}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4035840080612367158
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8176319540442464801}
-    m_Modifications:
-    - target: {fileID: 2174993241772398330, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -40.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174993241772398330, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174993241772398330, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -141.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174993241772398330, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.14512855
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174993241772398330, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174993241772398330, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.98941284
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174993241772398330, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174993241772398330, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174993241772398330, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -163.311
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174993241772398330, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174993241772884506, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
-      propertyPath: m_Name
-      value: Particles
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
---- !u!4 &2750872538699992524 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2174993241772398330, guid: cc7903cd82818ac45a8c6fe144b39303, type: 3}
-  m_PrefabInstance: {fileID: 4035840080612367158}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4048500319867712984
 PrefabInstance:
@@ -54333,6 +54278,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48dd59845eae74341b67ca41271f6bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
+  minItems: 1
+  maxItems: 10
+  maxAttempts: 100
 --- !u!4 &6994924564818308910 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 125377580829062381, guid: a6921c12fd34530409214d4493a22f0b, type: 3}
@@ -55477,6 +55426,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48dd59845eae74341b67ca41271f6bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
+  minItems: 1
+  maxItems: 10
+  maxAttempts: 100
 --- !u!4 &8484779070321424793 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 125377580829062381, guid: a6921c12fd34530409214d4493a22f0b, type: 3}

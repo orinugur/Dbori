@@ -17520,7 +17520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1253628084
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -27058,6 +27058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Storage Cube 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5780232039136709027, guid: 9f20e83dd1e6d5147872ec2c88a73b18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28338,13 +28342,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items:
+  - {fileID: 7303225375147755100, guid: fec03c1f6e254884e9a1d7bd0f0d41fd, type: 3}
+  - {fileID: 7303225375147755100, guid: fec03c1f6e254884e9a1d7bd0f0d41fd, type: 3}
+  - {fileID: 7303225375147755100, guid: fec03c1f6e254884e9a1d7bd0f0d41fd, type: 3}
+  - {fileID: 7303225375147755100, guid: fec03c1f6e254884e9a1d7bd0f0d41fd, type: 3}
+  - {fileID: 7050049906101579654, guid: e295dc384727397418471a4ee2d19d0b, type: 3}
+  - {fileID: 9193526447336642938, guid: 00243c5575fc95c4898e6a69a17dee48, type: 3}
+  - {fileID: 5780232039136709027, guid: 9f20e83dd1e6d5147872ec2c88a73b18, type: 3}
+  - {fileID: 7050049906101579654, guid: e295dc384727397418471a4ee2d19d0b, type: 3}
+  - {fileID: 7050049906101579654, guid: e295dc384727397418471a4ee2d19d0b, type: 3}
+  - {fileID: 2450586134575511945, guid: e56c99252a6171c4db678f6dda01e9e9, type: 3}
   - {fileID: 2404475858320205251, guid: 374256a0890d0444ba5f5cd03d03fd17, type: 3}
   - {fileID: 3255365433023301651, guid: 69108fdfb339e72479309dc486b233d8, type: 3}
-  - {fileID: 9193526447336642938, guid: 00243c5575fc95c4898e6a69a17dee48, type: 3}
-  - {fileID: 7050049906101579654, guid: e295dc384727397418471a4ee2d19d0b, type: 3}
-  - {fileID: 5780232039136709027, guid: 9f20e83dd1e6d5147872ec2c88a73b18, type: 3}
-  minItems: 5
-  maxItems: 50
+  minItems: 10
+  maxItems: 20
   maxAttempts: 100
 --- !u!4 &2020239171
 Transform:
@@ -30370,6 +30381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hat
       objectReference: {fileID: 0}
+    - target: {fileID: 9193526447336642938, guid: 00243c5575fc95c4898e6a69a17dee48, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30427,6 +30442,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: spaceSton
       objectReference: {fileID: 0}
+    - target: {fileID: 2404475858320205251, guid: 374256a0890d0444ba5f5cd03d03fd17, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30443,6 +30462,10 @@ PrefabInstance:
     - target: {fileID: 3255365433023301651, guid: 69108fdfb339e72479309dc486b233d8, type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 3255365433023301651, guid: 69108fdfb339e72479309dc486b233d8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7261327600281428595, guid: 69108fdfb339e72479309dc486b233d8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30500,6 +30523,10 @@ PrefabInstance:
     - target: {fileID: 2450586134575511945, guid: e56c99252a6171c4db678f6dda01e9e9, type: 3}
       propertyPath: m_Name
       value: NightVision
+      objectReference: {fileID: 0}
+    - target: {fileID: 2450586134575511945, guid: e56c99252a6171c4db678f6dda01e9e9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6160004106264043626, guid: e56c99252a6171c4db678f6dda01e9e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31117,6 +31144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tabaco
       objectReference: {fileID: 0}
+    - target: {fileID: 7303225375147755100, guid: fec03c1f6e254884e9a1d7bd0f0d41fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31348,6 +31379,10 @@ PrefabInstance:
     - target: {fileID: 7050049906101579654, guid: e295dc384727397418471a4ee2d19d0b, type: 3}
       propertyPath: m_Name
       value: GoldBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7050049906101579654, guid: e295dc384727397418471a4ee2d19d0b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

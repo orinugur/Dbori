@@ -16,8 +16,10 @@ public class Result : MonoBehaviour
     public TextMeshProUGUI resultTextPrice;
     StringBuilder Namesb = new StringBuilder();
     StringBuilder Pricesb = new StringBuilder();
+    public bool canExit;
     public void Start()
     {
+        canExit = false;
         Cursor.lockState = CursorLockMode.None;  // 커서 잠금
 
         U_Num = GameManager.Instance.U_Num;
@@ -30,6 +32,16 @@ public class Result : MonoBehaviour
         resultTextName.text = Namesb.ToString();
         resultTextPrice.text = Pricesb.ToString();
         StartCoroutine(ResultText());
+    }
+    public void Update()
+    {
+        if (canExit)
+        {
+            if (Input.anyKeyDown)
+            {
+                RoomManager.Instance.LoadScene("mainroom");
+            }
+        }
     }
     void ResultLand()
     {
@@ -62,6 +74,7 @@ public class Result : MonoBehaviour
         GameManager.Instance.names.Clear();
         GameManager.Instance.itemPrice.Clear();
         GameManager.Instance.items.Clear();
+        canExit = true;
     }
 
 

@@ -6,9 +6,9 @@ using UnityEngine.AI;
 public class ItemSpawn : Singleton<ItemSpawn>
 {
     public GameObject[] items; // 스폰할 아이템 배열
-    public int minItems = 1; // 최소 아이템 수
-    public int maxItems = 10; // 최대 아이템 수
-    public int maxAttempts = 100; // 스폰 위치 찾기 시도 횟수
+    public int minItems = 10; // 최소 아이템 수
+    public int maxItems = 50; // 최대 아이템 수
+    public int maxAttempts = 500; // 스폰 위치 찾기 시도 횟수
 
 
     public void SpawnItemsInNavMesh()
