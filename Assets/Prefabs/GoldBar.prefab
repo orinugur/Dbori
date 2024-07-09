@@ -252,4 +252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19fedaef12717204db798e2da4375632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asdf2: {fileID: 21300000, guid: 4d640e193b0898e42a3b8dc2fc79510d, type: 3}
+  Image: {fileID: 21300000, guid: 4d640e193b0898e42a3b8dc2fc79510d, type: 3}
+  DataClassName: 
+  DataName: 
+  Price: 0
+  UseBles: 0
+  UsaBles: 0

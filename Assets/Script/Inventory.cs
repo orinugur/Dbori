@@ -93,6 +93,7 @@ public class Inventory : MonoBehaviour
                     
                     int price = inventoryIndex[selectedSlot].GetComponent<ItemS>().Price;
                     Box.GetComponent<InBox>().InsertBox(price);
+                    Box.GetComponent<InBox>().InsertGameManager(inventoryIndex[selectedSlot].GetComponent<ItemS>());
                     inBox = true;
                     break;
                 }
@@ -250,7 +251,7 @@ public class Inventory : MonoBehaviour
         {
             switch (item.DataClassName)
             {
-                case "Item_Tobacco":
+                case "Item_Tabaco":
                     UseTabacco();
                     break;
                 case "Item_NightVision":
@@ -266,12 +267,13 @@ public class Inventory : MonoBehaviour
     void UseTabacco()
     {
         UseItem();
+        transform.GetComponent<HP>().PlusHP(20);
         //타바코 사용효과
     }
     void UseNightVision()
     {
         UseItem();
-        //나이트비전 사용효과
+        transform.GetChild(3).transform.GetChild(1).gameObject.SetActive(true);
     }
     void UseItem()
     {

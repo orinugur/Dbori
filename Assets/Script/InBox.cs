@@ -22,6 +22,12 @@ public class InBox : MonoBehaviour
     {
         Price += price;
     }
+    public void InsertGameManager(ItemS Name)
+    {
+        GameManager.Instance.items.Add(Name);
+        GameManager.Instance.names.Add(Name.DataName);
+        GameManager.Instance.itemPrice.Add(Name.Price);
+    }
 
     public void ExitSuccess(GameObject player)
     {

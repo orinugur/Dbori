@@ -35,6 +35,7 @@ public class Boat : MonoBehaviour
                 Debug.Log(other.transform.gameObject);
                 inbox.ExitSuccess(other.transform.gameObject);
                 //other.gameObject.tag = "Default";
+                StartCoroutine(ResultSceens());
             }
           
         }
@@ -43,5 +44,12 @@ public class Boat : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         inturectText.text = null;
+    }
+    
+    IEnumerator ResultSceens()
+    {
+        yield return new WaitForSecondsRealtime(5f);
+        RoomManager.Instance.LoadScene("Result");
+
     }
 }

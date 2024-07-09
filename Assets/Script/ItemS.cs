@@ -8,6 +8,7 @@ public class ItemS : MonoBehaviour
 {
     public Sprite Image;
     public string DataClassName;
+    public string DataName;
     public int Price;
     public bool UseBles;
     public int UsaBles;
@@ -30,6 +31,7 @@ public class ItemS : MonoBehaviour
             return;
         Price=itemData.Price;
         UsaBles = itemData.Usable;
+        DataName= itemData.Name;
         if(itemData.Usable > 0)
         {
             UseBles=true;

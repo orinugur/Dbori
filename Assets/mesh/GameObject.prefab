@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Image: {fileID: 21300000, guid: f75b182f1a99b32479370f97f5dba4a6, type: 3}
   DataClassName: 
+  DataName: 
   Price: 0
   UseBles: 0
   UsaBles: 0

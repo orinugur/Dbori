@@ -12,6 +12,8 @@ public class DBManager : Singleton<DBManager>
     [SerializeField] public string _pws = "1234";
     private MySqlConnection _dbConnection;
     private bool _isconnectTestComplete;
+    public int currentMoney;
+    public int newMoney;
 
     public string message;
 
@@ -151,11 +153,11 @@ public class DBManager : Singleton<DBManager>
         if (result != null)
         {
             // object 타입의 result를 int 타입으로 변환
-            int currentMoney = Convert.ToInt32(result);
+            currentMoney = Convert.ToInt32(result);
             Debug.Log($"Current U_Money: {currentMoney}");
 
             // 현재 U_Money 값에 Price를 더함
-            int newMoney = currentMoney + Price;
+            newMoney = currentMoney + Price;
             Debug.Log($"New U_Money: {newMoney}");
 
             // U_Money 값을 업데이트하는 쿼리

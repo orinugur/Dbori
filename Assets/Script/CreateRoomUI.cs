@@ -5,13 +5,10 @@ using UnityEngine.UI;
 public class CreateRoomUI : MonoBehaviour
 {
 
-
-
     private CreateGameRoomData roomData;
 
     void Start()
-    {
-       
+    {  
         roomData = new CreateGameRoomData() { imposterCount = 1, maxPlayerCount = 10 };
     }
     // Update is called once per frame

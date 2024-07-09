@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
 {
     private HashSet<GameObject> attackedObjects = new HashSet<GameObject>();
 
+    public int Bouns;
+    public float Count;
     [SerializeField]
     public int Dmg = 20;
     private void OnCollisionEnter(Collision collision)
@@ -14,6 +16,11 @@ public class Bullet : MonoBehaviour
         {
             attackedObjects.Add(collision.gameObject);//공격하지 않은 오브젝트라면 공격오브젝트에다가 담음
             HandleAttack(collision.gameObject);// 공격하지 않은 오브젝트일 경우 공격 처리
+        }
+        Bouns++;
+        if (Bouns > 1)
+        {
+            Destroy(gameObject);
         }
     }
     public void HandleAttack(GameObject target)
@@ -24,4 +31,13 @@ public class Bullet : MonoBehaviour
             targetHP.MinusHP(Dmg);
         }
     }
+    private void Update()
+    {
+        Count += Time.deltaTime;
+        if(Count>5)
+        {
+            Destroy(this ); 
+        }
+    }
+    
 }

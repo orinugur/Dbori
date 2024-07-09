@@ -1,47 +1,59 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public enum ItemType { Head, SpaceStone, Hat }
-
-public class ItemSpawn : MonoBehaviour
+public class ItemSpawn : Singleton<ItemSpawn>
 {
+    public GameObject[] items; // 스폰할 아이템 배열
+    public int minItems = 1; // 최소 아이템 수
+    public int maxItems = 10; // 최대 아이템 수
+    public int maxAttempts = 100; // 스폰 위치 찾기 시도 횟수
 
+
+    public void SpawnItemsInNavMesh()
+    {
+        int itemsToSpawn = Random.Range(minItems, maxItems + 1);
+
+        for (int i = 0; i < itemsToSpawn; i++)
+        {
+            Vector3 randomPosition;
+            if (TryGetRandomNavMeshPosition(out randomPosition))
+            {
+                int itemIndex = Random.Range(0, items.Length);
+                Instantiate(items[itemIndex], randomPosition, Quaternion.identity);
+            }
+            else
+            {
+                Debug.LogWarning("Failed to find a valid NavMesh position after multiple attempts.");
+            }
+        }
+    }
+
+    private bool TryGetRandomNavMeshPosition(out Vector3 result)
+    {
+        for (int i = 0; i < maxAttempts; i++)
+        {
+            Vector3 randomPosition = GetRandomPositionWithinBounds();
+            NavMeshHit hit;
+            if (NavMesh.SamplePosition(randomPosition, out hit, 1.0f, NavMesh.AllAreas))
+            {
+                result = hit.position;
+                return true;
+            }
+        }
+
+        result = Vector3.zero;
+        return false;
+    }
+
+    private Vector3 GetRandomPositionWithinBounds()
+    {
+        NavMeshTriangulation navMeshData = NavMesh.CalculateTriangulation();
+
+        int vertexIndex = Random.Range(0, navMeshData.vertices.Length);
+        Vector3 randomPosition = navMeshData.vertices[vertexIndex];
+
+        return randomPosition;
+    }
 }
-//{
-//    List<Item> itemInventory = new List<Item>();
-//    public ItemSO[] itemDB;
-
-//    public void ItemCreate(ItemType inputWeaponType)
-//    {
-//        int itemIndex = (int)inputWeaponType;
-
-//        GameObject itemGO = new GameObject(inputWeaponType.ToString());
-//        itemGO.transform.parent = this.gameObject.transform;
-
-//        Item item = itemGO.AddComponent<Item>();
-
-//        item.itemName = itemDB[itemIndex].itemName;
-//        item.price = itemDB[itemIndex].price;
-//        item.weight = itemDB[itemIndex].weight;
-//        item.PreFab = itemDB[itemIndex].PreFab;
-
-//        itemInventory.Add(item);
-//    }
-
-//    void Start()
-//    {
-//        ItemCreate(ItemType.Hat);
-//        ItemCreate(ItemType.Head);
-//        ItemCreate(ItemType.SpaceStone);
-
-//        ShowInventoryItems();
-//    }
-
-//    void ShowInventoryItems()
-//    {
-//        foreach (Item i in itemInventory)
-//        {
-//            Debug.Log(i.itemName + " price: " + i.price);
-//        }
-//    }
-//}
