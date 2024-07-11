@@ -1192,7 +1192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &80582517
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1223,7 +1223,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: -727131665
   m_SortingLayer: 1
-  m_SortingOrder: 50
+  m_SortingOrder: 500
   m_SortAtRoot: 0
 --- !u!114 &80582519
 MonoBehaviour:
@@ -13915,7 +13915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &973198388
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15091,7 +15091,7 @@ MonoBehaviour:
   skyboxMaterial: {fileID: 2100000, guid: d1385980456cd2044b282d73625457db, type: 2}
   startThickness: 0.1
   endThickness: 1.3
-  duration: 30
+  duration: 100
 --- !u!1 &1075405546
 GameObject:
   m_ObjectHideFlags: 0
@@ -23441,9 +23441,9 @@ RectTransform:
   m_Children:
   - {fileID: 1346883336}
   - {fileID: 58101033}
+  - {fileID: 200538331}
   - {fileID: 1409946355}
   - {fileID: 973198388}
-  - {fileID: 200538331}
   - {fileID: 831915754}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31146,7 +31146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7303225375147755100, guid: fec03c1f6e254884e9a1d7bd0f0d41fd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
