@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +7,8 @@ public class CreateRoomUI : MonoBehaviour
 {
 
     private CreateGameRoomData roomData;
+    public GameObject UI;
+    public GameObject Bullet;
 
     void Start()
     {  
@@ -19,6 +22,14 @@ public class CreateRoomUI : MonoBehaviour
     {
         //var manager = BallRoomManager.singleton;
         //manager.StartHost();
+        Bullet.SetActive(true);
+        UI.SetActive(false);
+        //RoomManager.Instance.LoadScene("InGame");
+        //StartCoroutine(startScene());
+    }
+    IEnumerator startScene()
+    {
+        yield return new WaitForSecondsRealtime(1f);
         RoomManager.Instance.LoadScene("InGame");
     }
     public class CreateGameRoomData

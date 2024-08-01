@@ -170,6 +170,7 @@ MonoBehaviour:
   U_Num: 0
   resultTextName: {fileID: 1760895084}
   resultTextPrice: {fileID: 712522370}
+  canExit: 0
 --- !u!1001 &32766129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3511,7 +3512,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.5, y: -194.953}
+  m_AnchoredPosition: {x: 10.5, y: -194.99207}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058656005
@@ -6604,8 +6605,8 @@ Transform:
   m_GameObject: {fileID: 1575560003949570554}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9762864, z: -0, w: 0.21648295}
-  m_LocalPosition: {x: -10.300567, y: -3.4442997, z: 17.307732}
-  m_LocalScale: {x: 2.3131104, y: 2.3131104, z: 2.3131104}
+  m_LocalPosition: {x: -10.87, y: -4.71, z: 17.3}
+  m_LocalScale: {x: 4.3275266, y: 4.3275266, z: 4.3275266}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5660190268644399616}
