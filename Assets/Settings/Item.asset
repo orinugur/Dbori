@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
-  m_Name: Ultra_PipelineAsset_ForwardRenderer3
+  m_Name: Item
   m_EditorClassIdentifier: 
   debugShaders:
     debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7, type: 3}
@@ -39,10 +39,10 @@ MonoBehaviour:
   m_AssetVersion: 2
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   m_TransparentLayerMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
   m_DefaultStencilState:
     overrideStencilState: 0
     stencilReference: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
   injectionPoint: 600
   fetchColorBuffer: 1
   requirements: 2
-  passMaterial: {fileID: 2100000, guid: 32693e3b4c4483840a6370ca39ed683a, type: 2}
+  passMaterial: {fileID: 2100000, guid: 3679aff01f3152a4f8ecbd01351989f2, type: 2}
   passIndex: 0
   bindDepthStencilAttachment: 1
   m_Version: 1

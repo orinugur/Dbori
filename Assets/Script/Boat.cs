@@ -29,7 +29,7 @@ public class Boat : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            inturectText.text = " Psees 'G' to Exit";
+            inturectText.text = " Press 'G' to Exit";
             if (Input.GetKeyDown(KeyCode.G))
             {
                 Debug.Log(other.transform.gameObject);
