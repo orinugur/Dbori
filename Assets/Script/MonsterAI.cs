@@ -3,55 +3,48 @@ using UnityEngine.AI;
 
 public class MonsterAI : MonoBehaviour
 {
-    public Transform player; // 플레이어의 Transform을 Inspector에서 할당
+    public Transform player; // 플레이어의 Transform
     private NavMeshAgent agent;
     public Animator animator;
     public bool isAtk;
     public MeleeAtk MeleeAtk;
     public TrailRenderer atkEp;
     public float speed;
+    private IState _curState;
+    public float detectionRadius = 5f; // 플레이어 감지 범위
+    public LayerMask playerLayerMask; // 플레이어 레이어 마스크
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        player = GameObject.FindWithTag("Player").transform; // 태그를 이용하여 플레이어의 Transform을 찾습니다.
-        //AnimatorController controller = GetComponent<AnimatorController>();
+        player = null; // 플레이어 초기화
         animator = GetComponent<Animator>();
-        isAtk= false;   
+        isAtk = false;
+        ChangeState(new IdleState(this)); // 처음에는 IdleState로 시작
     }
 
+    public void ChangeState(IState newState)
+    {
+        _curState?.ExitState();
+        _curState = newState;
+        _curState.EnterState();
+    }
 
     void Update()
     {
-        if (player != null)
-        {
-            agent.SetDestination(player.position);
-            speed = agent.velocity.magnitude;
-            animator.SetFloat("Speed", speed);
-
-        }
-        else
-        {
-            player = GameObject.FindWithTag("Player").transform; // 태그를 이용하여 플레이어의 Transform을 찾습니다.
-        }
-        //Debug.Log(agent.destination);
-        //Debug.Log(agent.remainingDistance);
-        if (agent.remainingDistance < 3 && isAtk == false)
-        {
-            isAtk = true;
-            animator.SetTrigger("ATK");
-            
-        }
+        _curState?.ExecuteOnUpdate(); // 현재 상태의 Update 메서드 실행
     }
+
     public void CanAtk()
     {
-        //animator.SetBool("isAtk", false);
         isAtk = false;
     }
+
     public void CantAtk()
     {
-        //animator.SetBool("isAtk", true);
         isAtk = false;
     }
+
     public void StartAtk()
     {
         MeleeAtk.ResetAtk();
@@ -59,12 +52,24 @@ public class MonsterAI : MonoBehaviour
         atkEp.time = 0.2f;
         MeleeAtk.isAtk = true;
     }
+
     public void EndAtk()
     {
-        MeleeAtk.isAtk=false;
-        
+        MeleeAtk.isAtk = false;
         atkEp.time = 0f;
         atkEp.enabled = false;
     }
-    
+
+    public Transform DetectPlayer()
+    {
+        Collider[] hits = Physics.OverlapSphere(transform.position, detectionRadius, playerLayerMask);
+        foreach (var hit in hits)
+        {
+            if (hit.CompareTag("Player"))
+            {
+                return hit.transform; 
+            }
+        }
+        return null; 
+    }
 }

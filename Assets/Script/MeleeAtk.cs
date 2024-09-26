@@ -41,12 +41,5 @@ public class MeleeAtk : MonoBehaviour
    {
         attackedObjects.Clear();
     }
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    if (attackedObjects.Contains(other.gameObject))
-    //    {
-    //        attackedObjects.Remove(other.gameObject);
-    //        Debug.Log(other.gameObject.name + "이(가) 트리거를 벗어났습니다.");
-    //    }
-    //}
+
 }

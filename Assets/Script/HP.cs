@@ -110,6 +110,11 @@ public class HP : MonoBehaviour
         gameObject.GetComponent<PlayerMove>().enabled = false;
         gameObject.GetComponent<PlayerInput>().enabled = false;
         gameObject.GetComponent<CharacterController>().enabled = false;
+        gameObject.layer = 0; 
+        foreach (Transform child in gameObject.transform)
+        {
+            child.gameObject.layer = 0; 
+        }
         transform.GetChild(0).gameObject.SetActive(true);
         //transform.GetChild(0).GetComponent<Rigidbody>().AddForce(Vector3.forward,*5f,ForceMode();
         transform.GetChild(1).gameObject.SetActive(false);
