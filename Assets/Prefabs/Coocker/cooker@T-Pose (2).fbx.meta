@@ -81,8 +81,567 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: cooker_rig_singleChain1:Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:Spine1
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:Spine2
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: cooker_rig_singleChain1:RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: cooker@T-Pose (2)(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Cooker
+      parentName: cooker@T-Pose (2)(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.00000003774895, y: 1.11022296e-16, z: -1.11022296e-16, w: 1}
+      scale: {x: 213.252, y: 213.252, z: 213.252}
+    - name: CookerSkeletalMesh
+      parentName: Cooker
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 3.9443045e-31, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:SCH_r_hand01_palm_JNT
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 1.7763573e-15, y: 3.308721e-24, z: -0, w: 1}
+      scale: {x: 1, y: 0.99999976, z: 1.0000002}
+    - name: cooker_rig_singleChain1:SCH_l_hand01_palm_JNT
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 5.916457e-31, z: -0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.99999976}
+    - name: cooker_rig_singleChain1:r_wheel_GEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 3.9443045e-31, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:r_hand_GEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 6.617445e-24, z: -6.6174433e-24, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: cooker_rig_singleChain1:r_flap_GEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 6.902533e-31, z: -0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: cooker_rig_singleChain1:r_armUpper_GEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 1.7763573e-15, y: 2.9582284e-31, z: 0, w: 1}
+      scale: {x: 0.9999999, y: 0.99999976, z: 0.99999976}
+    - name: cooker_rig_singleChain1:r_armLower_GEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 6.617445e-24, z: -6.6174433e-24, w: 1}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: cooker_rig_singleChain1:m_wheelGEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 3.9443045e-31, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:l_wheel_GEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 3.9443045e-31, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:l_hand_GEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 3.9443045e-31, z: -0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 0.9999999}
+    - name: cooker_rig_singleChain1:l_flap_GEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 6.902533e-31, z: -6.617444e-24, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 0.9999999}
+    - name: cooker_rig_singleChain1:l_armUpper_GEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 3.9443045e-31, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:l_armLower_GEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 3.9443045e-31, z: -0, w: 1}
+      scale: {x: 0.9999999, y: 1, z: 0.9999999}
+    - name: cooker_rig_singleChain1:draw_GEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 3.9443045e-31, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:cooker_GEO
+      parentName: CookerSkeletalMesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: 3.9443045e-31, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:Hips
+      parentName: cooker@T-Pose (2)(Clone)
+      position: {x: 0.0029375185, y: 0.7999451, z: -0.0102902865}
+      rotation: {x: 0.000004681924, y: 0.000046734436, z: -0.0012210503, w: 0.9999993}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:Spine
+      parentName: cooker_rig_singleChain1:Hips
+      position: {x: -0, y: 0.15381958, z: 0.03153784}
+      rotation: {x: 0.10093743, y: 0.00007676068, z: 0.0012195307, w: 0.99489206}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:Spine1
+      parentName: cooker_rig_singleChain1:Spine
+      position: {x: -0, y: 0.18318923, z: -0.0000000011516202}
+      rotation: {x: -6.445985e-26, y: 9.524349e-14, z: 6.767901e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:Spine2
+      parentName: cooker_rig_singleChain1:Spine1
+      position: {x: -0, y: 0.20935923, z: -0.000000001877023}
+      rotation: {x: 0, y: 8.077936e-28, z: -1.0097421e-27, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:Neck
+      parentName: cooker_rig_singleChain1:Spine2
+      position: {x: -0, y: 0.23552912, z: -0.000000018460845}
+      rotation: {x: -0.10094216, y: 1.625046e-19, z: -6.9910055e-18, w: 0.9948923}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:Head
+      parentName: cooker_rig_singleChain1:Neck
+      position: {x: -0, y: 0.22329162, z: 0.003924713}
+      rotation: {x: 0, y: 0, z: 6.257555e-33, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:HeadTop_End
+      parentName: cooker_rig_singleChain1:Head
+      position: {x: -0, y: 0.8534671, z: 0.01500103}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftShoulder
+      parentName: cooker_rig_singleChain1:Spine2
+      position: {x: -0.2710517, y: 0.2586411, z: -0.004597847}
+      rotation: {x: 0.47799373, y: -0.5214954, z: 0.48501834, w: 0.5141223}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftArm
+      parentName: cooker_rig_singleChain1:LeftShoulder
+      position: {x: -2.9664732e-11, y: 0.5606463, z: -1.3066284e-10}
+      rotation: {x: 0.03630321, y: -0.000049966176, z: -0.007206825, w: 0.99931484}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftForeArm
+      parentName: cooker_rig_singleChain1:LeftArm
+      position: {x: -1.6346373e-10, y: 0.60406667, z: -0.0000000014434013}
+      rotation: {x: -0.00000021627336, y: -0.0002285169, z: -0.0000002644752, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftHand
+      parentName: cooker_rig_singleChain1:LeftForeArm
+      position: {x: 7.187075e-10, y: 0.8458986, z: -0.000000001546241}
+      rotation: {x: 0.037484087, y: 0.41314796, z: -0.01702286, w: 0.90973294}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftHandThumb1
+      parentName: cooker_rig_singleChain1:LeftHand
+      position: {x: 0.06715355, y: 0.1391094, z: 0.000000047075886}
+      rotation: {x: 0.22633767, y: -0.023770893, z: -0.17660569, w: 0.9576099}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftHandThumb2
+      parentName: cooker_rig_singleChain1:LeftHandThumb1
+      position: {x: 0.015044904, y: 0.12265702, z: 0.000000003930024}
+      rotation: {x: 0.00017505731, y: 0.0044948333, z: -0.083039366, w: 0.99653614}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftHandThumb3
+      parentName: cooker_rig_singleChain1:LeftHandThumb2
+      position: {x: -0.005169419, y: 0.116809934, z: -2.8167904e-10}
+      rotation: {x: -0.00030853442, y: 0.0037993726, z: -0.036821745, w: 0.9993146}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftHandThumb4
+      parentName: cooker_rig_singleChain1:LeftHandThumb3
+      position: {x: -0.009875495, y: 0.08338125, z: 0.0000000017366175}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftHandIndex1
+      parentName: cooker_rig_singleChain1:LeftHand
+      position: {x: 0.0000000032852716, y: 0.18668206, z: -0.015409875}
+      rotation: {x: -0.065771334, y: -0.1819309, z: 0.14112061, w: 0.970907}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftHandIndex2
+      parentName: cooker_rig_singleChain1:LeftHandIndex1
+      position: {x: 0.059389897, y: 0.21228921, z: 0.000000009746243}
+      rotation: {x: 0.00007857929, y: 0.006536299, z: -0.25784343, w: 0.96616465}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftHandIndex3
+      parentName: cooker_rig_singleChain1:LeftHandIndex2
+      position: {x: -0.053799495, y: 0.21174964, z: 0.000000003072253}
+      rotation: {x: -0.004158438, y: 0.027990423, z: 0.101113476, w: 0.9944724}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftHandIndex4
+      parentName: cooker_rig_singleChain1:LeftHandIndex3
+      position: {x: -0.005590403, y: 0.12104182, z: 7.7036305e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightShoulder
+      parentName: cooker_rig_singleChain1:Spine2
+      position: {x: 0.2710517, y: 0.25858566, z: -0.0048681786}
+      rotation: {x: 0.4778035, y: 0.52169067, z: -0.48530543, w: 0.51383}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightArm
+      parentName: cooker_rig_singleChain1:RightShoulder
+      position: {x: 3.1725518e-11, y: 0.5606463, z: -1.3023964e-10}
+      rotation: {x: 0.03620347, y: 0.000085697575, z: 0.0076901815, w: 0.99931484}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightForeArm
+      parentName: cooker_rig_singleChain1:RightArm
+      position: {x: -3.1652122e-11, y: 0.6040745, z: -2.7886612e-10}
+      rotation: {x: -0.000000034031206, y: 0.00023485802, z: -0.000000020304249, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightHand
+      parentName: cooker_rig_singleChain1:RightForeArm
+      position: {x: 0.0000000017497082, y: 0.8460046, z: -2.3740654e-12}
+      rotation: {x: 0.05351171, y: -0.5065805, z: 0.031522647, w: 0.8599529}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightHandThumb1
+      parentName: cooker_rig_singleChain1:RightHand
+      position: {x: -0.045729518, y: 0.13998672, z: -0.000000051489458}
+      rotation: {x: 0.25513506, y: 0.011094718, z: 0.09621318, w: 0.9620427}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightHandThumb2
+      parentName: cooker_rig_singleChain1:RightHandThumb1
+      position: {x: -0.01785629, y: 0.11645222, z: 3.3034184e-10}
+      rotation: {x: 0.00037501793, y: -0.0067548295, z: 0.09650443, w: 0.9953096}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightHandThumb3
+      parentName: cooker_rig_singleChain1:RightHandThumb2
+      position: {x: 0.004981185, y: 0.12093095, z: 0.0000000020376638}
+      rotation: {x: -0.00016879279, y: -0.0019101193, z: 0.046942282, w: 0.9988958}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightHandThumb4
+      parentName: cooker_rig_singleChain1:RightHandThumb3
+      position: {x: 0.012875121, y: 0.09473035, z: -0.0000000044257766}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightHandIndex1
+      parentName: cooker_rig_singleChain1:RightHand
+      position: {x: 0.0000000013491427, y: 0.2128037, z: -0.02658663}
+      rotation: {x: -0.08738805, y: -0.1023271, z: 0.23394762, w: 0.962892}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightHandIndex2
+      parentName: cooker_rig_singleChain1:RightHandIndex1
+      position: {x: 0.08554981, y: 0.17194958, z: -0.000000010541622}
+      rotation: {x: 0.0056723845, y: 0.04836785, z: -0.33771935, w: 0.93998617}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightHandIndex3
+      parentName: cooker_rig_singleChain1:RightHandIndex2
+      position: {x: -0.05466368, y: 0.23540395, z: 0.0000000024030398}
+      rotation: {x: 0.00074456196, y: -0.0030234, z: -0.013177961, w: 0.9999083}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightHandIndex4
+      parentName: cooker_rig_singleChain1:RightHandIndex3
+      position: {x: -0.03088613, y: 0.11871451, z: -5.9228283e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftUpLeg
+      parentName: cooker_rig_singleChain1:Hips
+      position: {x: -0.37297526, y: -0.085455246, z: 0.0015709876}
+      rotation: {x: 0.014868621, y: 0.09630981, z: 0.99456316, w: -0.03670788}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftLeg
+      parentName: cooker_rig_singleChain1:LeftUpLeg
+      position: {x: -4.2632563e-16, y: 0.13734129, z: 3.196483e-11}
+      rotation: {x: -0.3322178, y: -0.2942012, z: -0.031705227, w: 0.8955846}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftFoot
+      parentName: cooker_rig_singleChain1:LeftLeg
+      position: {x: -0.000000004050389, y: 0.3871885, z: 6.650002e-10}
+      rotation: {x: 0.68855196, y: 0.11403839, z: -0.13908553, w: 0.70252883}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftToeBase
+      parentName: cooker_rig_singleChain1:LeftFoot
+      position: {x: -0.000000019269027, y: 0.48349878, z: -0.000000014268977}
+      rotation: {x: 0.32869276, y: 0.18293971, z: -0.06505827, w: 0.92426276}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:LeftToe_End
+      parentName: cooker_rig_singleChain1:LeftToeBase
+      position: {x: -3.0053426e-10, y: 0.23537903, z: 1.9211946e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightUpLeg
+      parentName: cooker_rig_singleChain1:Hips
+      position: {x: 0.37297526, y: -0.085455246, z: 0.0044300077}
+      rotation: {x: -0.012713059, y: 0.09735239, z: 0.9943195, w: 0.04110614}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightLeg
+      parentName: cooker_rig_singleChain1:RightUpLeg
+      position: {x: -1.9895197e-15, y: 0.13735518, z: 4.656755e-12}
+      rotation: {x: -0.30221277, y: -0.025396159, z: 0.14888653, w: 0.9411988}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightFoot
+      parentName: cooker_rig_singleChain1:RightLeg
+      position: {x: 0.0000000024315465, y: 0.3674885, z: 5.5144295e-10}
+      rotation: {x: 0.63769567, y: 0.17504747, z: -0.07076984, w: 0.74678934}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightToeBase
+      parentName: cooker_rig_singleChain1:RightFoot
+      position: {x: 0.000000002827931, y: 0.37218693, z: -0.000000007921944}
+      rotation: {x: 0.42454362, y: -0.2505011, z: 0.123480685, w: 0.8612575}
+      scale: {x: 1, y: 1, z: 1}
+    - name: cooker_rig_singleChain1:RightToe_End
+      parentName: cooker_rig_singleChain1:RightToeBase
+      position: {x: 0.0000000022935733, y: 0.18725716, z: 8.717221e-10}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
