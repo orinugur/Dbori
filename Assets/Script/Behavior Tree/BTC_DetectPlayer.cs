@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace BehaviorDesigner.Runtime.Tasks
@@ -13,17 +14,21 @@ namespace BehaviorDesigner.Runtime.Tasks
         public Animator animator;
         public override void OnStart()
         {
-            if(TargetTransform==null)
             animator.SetTrigger("Saving");
+                                isAwakeAnimationPlayed = false; // 상태 초기화
         }
         public override TaskStatus OnUpdate()
         {
+
+            Debug.Log("DP");
             // 타겟이 없으면 탐지 로직 실행
             if (TargetTransform.Value == null)
             {
                 Collider[] hits = Physics.OverlapSphere(transform.position, detectionRadius, TargetLayerMask);
+
                 foreach (var hit in hits)
                 {
+                    Debug.Log("DP1");
                     if (hit.CompareTag("Player") || hit.CompareTag("Enemy"))
                     {
                         TargetTransform.Value = hit.transform;
@@ -43,18 +48,23 @@ namespace BehaviorDesigner.Runtime.Tasks
 
                 if (!stateInfo.IsName("Awake")) // Awake 상태가 아니면 Success 반환
                 {
-                    isAwakeAnimationPlayed = false; // 상태 초기화
+
                     return TaskStatus.Success; // 성공 반환
                 }
                 Debug.Log("Awake 애니메이션 재생 중...");
             }
-            else if(!isAwakeAnimationPlayed&&TargetTransform.Value!=null)
-            {
-                return TaskStatus.Success; // 성공 반환
-            }
+            //else if(!isAwakeAnimationPlayed&&TargetTransform.Value!=null)
+            //{
+            //    return TaskStatus.Success; // 성공 반환
+            //}
             return TaskStatus.Running; // 진행 중이면 계속 대기
         }
 
+        IEnumerator awake()
+        {
+            yield return new WaitForSecondsRealtime(1f);
+        }
     }
+    
 
 }

@@ -35,27 +35,25 @@ namespace BehaviorDesigner.Runtime.Tasks
         // 공격 상태 여부 체크
         public override TaskStatus OnUpdate()
         {
-            // 타겟이 없으면 실패
-            if (TargetTransform.Value == null)
-            {
-                return TaskStatus.Failure;
-            }
 
-            // 남은 거리가 3 이하일 때 공격 시작
-            if (agent.remainingDistance <= 3f && !isAtk)
+            if (TargetTransform != null)
             {
-                StartAtk();
-            }
+                // 남은 거리가 3 이하일 때 공격 시작
+                if (agent.remainingDistance <= 3f && !isAtk)
+                {
+                    StartAtk();
+                }
 
-            // 공격이 끝났다면 성공 상태 반환
-            if (attackFinished)
-            {
-                isAtk = false;
-                MeleeAtk.isAtk = false;
-                return TaskStatus.Success;
+                // 공격이 끝났다면 성공 상태 반환
+                if (attackFinished)
+                {
+                    isAtk = false;
+                    MeleeAtk.isAtk = false;
+                    return TaskStatus.Success;
+                }
+                // 공격 중이면 Running 상태 유지
+                return TaskStatus.Running;
             }
-
-            // 공격 중이면 Running 상태 유지
             return TaskStatus.Running;
         }
 
