@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mVariableData:
     variableStartIndex: 
-    JSONSerialization: '{"Variables":[]}'
+    JSONSerialization: '{"Variables":[{"Type":"BehaviorDesigner.Runtime.SharedLayerMask","Name":"TargetLayer","IsShared":true,"IsGlobal":true,"LayerMaskmValue":136},{"Type":"BehaviorDesigner.Runtime.SharedLayerMask","Name":"TargetLaye","IsShared":true,"IsGlobal":true,"LayerMaskmValue":0}]}'
     fieldSerializationData:
       typeName: []
       fieldNameHash: 

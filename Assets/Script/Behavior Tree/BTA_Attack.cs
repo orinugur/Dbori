@@ -12,6 +12,7 @@ namespace BehaviorDesigner.Runtime.Tasks
         private NavMeshAgent agent;
         public Animator animator;
         private bool attackFinished;
+        public LayerMask TargetLayerMask;
 
         public override void OnStart()
         {
@@ -20,11 +21,13 @@ namespace BehaviorDesigner.Runtime.Tasks
             agent = GetComponent<NavMeshAgent>();
 
             // 타겟이 유효하지 않으면 리턴
-            if (TargetTransform.Value == null || TargetTransform.Value.gameObject.layer != 3)
+            if (TargetTransform.Value == null ||
+                (TargetTransform.Value.gameObject.layer != 3 && TargetTransform.Value.gameObject.layer != 7))
             {
                 TargetTransform.Value = null;
                 return;
             }
+
 
             // 타겟 위치로 이동
             agent.SetDestination(TargetTransform.Value.position);
