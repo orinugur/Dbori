@@ -1272,7 +1272,7 @@ MonoBehaviour:
   detectionRadius: 10
   targetLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2056
 --- !u!195 &974737561778626361
 NavMeshAgent:
   m_ObjectHideFlags: 0

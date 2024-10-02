@@ -33,11 +33,11 @@ public class RedText : MonoBehaviour
         {
             timer += Time.deltaTime; // 시간 누적
             currentValue = Mathf.Lerp(startValue, endValue, timer / duration); // 시간에 따라 점진적으로 값 감소
-            Debug.Log("Current Value: " + currentValue);
+            //Debug.Log("Current Value: " + currentValue);
             yield return null;
         }
         currentValue = endValue; // 최종 값으로 설정
-        Debug.Log("Final Value Reached: " + currentValue);
+        //Debug.Log("Final Value Reached: " + currentValue);
     }
 
 
