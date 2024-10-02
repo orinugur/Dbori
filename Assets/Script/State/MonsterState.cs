@@ -100,24 +100,30 @@ public class ChaseState : StateBase
 
     public override void ExecuteOnUpdate()
     {
+        if (_monster.player.gameObject.layer==0 ||_monster.player==null)
+        {
+            _monster.ChangeState(new IdleState(_monster));
+            return;
+        }
         if (_monster.player != null)
         {
-            if(_monster.player.gameObject.layer!= 3)
-            {
-                _monster.ChangeState(new IdleState(_monster));
-                return;
-            }
+            // 도착하기 전에 멈추도록 stoppingDistance 설정
+            agent.stoppingDistance = 2f; // 원하는 멈추는 거리 (플레이어와의 최소 거리)
+
+            // 플레이어 방향으로 이동
             agent.SetDestination(_monster.player.position);
             float speed = agent.velocity.magnitude;
-            animator.SetFloat("Speed", speed*2);
+            animator.SetFloat("Speed", speed * 2);
 
-            if (agent.remainingDistance < 3f && !_monster.isAtk)
+            // 공격 범위 안에 들어오면 공격 시작
+            if (agent.remainingDistance <= agent.stoppingDistance && !_monster.isAtk)
             {
                 _monster.isAtk = true;
                 animator.SetTrigger("ATK");
             }
 
-            if (_monster.isAtk && agent.remainingDistance >= 3f)
+            // 공격이 끝났을 때 다시 움직이도록 설정
+            if (_monster.isAtk && agent.remainingDistance > agent.stoppingDistance)
             {
                 _monster.isAtk = false;
             }

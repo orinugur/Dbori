@@ -50,5 +50,8 @@ MonoBehaviour:
   - {fileID: 2723251777676332125, guid: 3c4fbdcaf38bfb74195f4980178da731, type: 3}
   - {fileID: 2723251777676332125, guid: 78e8f3e534b1dce4aa2ec9e4f9471010, type: 3}
   - {fileID: 2723251777676332125, guid: b96f5ad600d1fc442a7468f68593b011, type: 3}
+  - {fileID: 8160071421546668858, guid: a750b97fb4faf5249b432e51c2ad6907, type: 3}
   randomNum: 0
   monsterNum: 0
+  MaxMonster: 0
+  MonsterCount: 0

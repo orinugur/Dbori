@@ -1,3 +1,4 @@
+using BehaviorDesigner.Runtime;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -58,6 +59,9 @@ public class HP : MonoBehaviour
                 case "Player":
                     DeadPlayer();
                     break;
+                case "Cooker":
+                    DeadCooker();
+                    break;
 
                 default:
                     break;
@@ -103,7 +107,18 @@ public class HP : MonoBehaviour
         gameObject.GetComponent<Collider>().isTrigger = true;
         gameObject.GetComponent<NavMeshAgent>().enabled = false;
         gameObject.GetComponent<Animator>().enabled=false;
+        gameObject.layer = 0;
         enabled = false;
+    }
+    public void DeadCooker()
+    {
+        gameObject.GetComponent<BehaviorTree>().enabled = false;
+        gameObject.GetComponent<NavMeshAgent>().enabled = false;
+        gameObject.GetComponent<Collider>().isTrigger = true;
+        gameObject.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Dead");
+        gameObject.layer = 0;
+        enabled = false;
+
     }
     public void DeadPlayer()//플레이어 사망시
     {

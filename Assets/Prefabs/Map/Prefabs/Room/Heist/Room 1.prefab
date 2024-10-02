@@ -650,6 +650,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48dd59845eae74341b67ca41271f6bc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
+  minItems: 10
+  maxItems: 50
+  maxAttempts: 500
 --- !u!1001 &2857656158008439014
 PrefabInstance:
   m_ObjectHideFlags: 0

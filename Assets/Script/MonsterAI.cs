@@ -12,7 +12,7 @@ public class MonsterAI : MonoBehaviour
     public float speed;
     private IState _curState;
     public float detectionRadius = 5f; // 플레이어 감지 범위
-    public LayerMask playerLayerMask; // 플레이어 레이어 마스크
+    public LayerMask targetLayerMask; // 플레이어 레이어 마스크
 
     void Start()
     {
@@ -62,11 +62,12 @@ public class MonsterAI : MonoBehaviour
 
     public Transform DetectPlayer()
     {
-        Collider[] hits = Physics.OverlapSphere(transform.position, detectionRadius, playerLayerMask);
+        Collider[] hits = Physics.OverlapSphere(transform.position, detectionRadius, targetLayerMask);
         foreach (var hit in hits)
         {
-            if (hit.CompareTag("Player"))
+            if (((1 << hit.gameObject.layer) & targetLayerMask) != 0)
             {
+                player = hit.transform;
                 return hit.transform; 
             }
         }
