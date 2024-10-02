@@ -51,7 +51,8 @@ public class LoginPopup : MonoBehaviour
         // 네트워크 주소 없는 경우, 디폴트 세팅
         if (string.IsNullOrWhiteSpace(NetworkManager.singleton.networkAddress))
         {
-            NetworkManager.singleton.networkAddress = "localhost";
+            NetworkManager.singleton.networkAddress = "";
+            //localhost
         }
 
         // 네트워크 주소 공란으로 변경될 경우를 대비해 기존 네트워크 주소 보관
