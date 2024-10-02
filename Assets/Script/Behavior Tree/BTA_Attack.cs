@@ -20,6 +20,7 @@ namespace BehaviorDesigner.Runtime.Tasks
             attackFinished = false;
             agent = GetComponent<NavMeshAgent>();
 
+           StopAllCoroutines();
             // 타겟이 유효하지 않으면 리턴
             if (TargetTransform.Value == null ||
                 (TargetTransform.Value.gameObject.layer != 3 && TargetTransform.Value.gameObject.layer != 7))
@@ -30,21 +31,34 @@ namespace BehaviorDesigner.Runtime.Tasks
 
 
             // 타겟 위치로 이동
-            agent.SetDestination(TargetTransform.Value.position);
-            float speed = agent.velocity.magnitude;
-            animator.SetFloat("Speed", speed * 2);
+            //agent.SetDestination(TargetTransform.Value.position);
+            //float speed = agent.velocity.magnitude;
+            //animator.SetFloat("Speed", speed * 2);
         }
 
         // 공격 상태 여부 체크
         public override TaskStatus OnUpdate()
         {
-
             if (TargetTransform != null)
             {
+                // 플레이어가 NavMesh 영역 밖에 있는지 확인
+                if (!agent.isOnNavMesh)
+                {
+                    Debug.LogWarning("NavMeshAgent가 NavMesh 영역에서 벗어났습니다.");
+                    StopAllCoroutines();
+                    return TaskStatus.Failure; // 또는 적절한 상태 반환
+                }
+
                 // 남은 거리가 3 이하일 때 공격 시작
                 if (agent.remainingDistance <= 3f && !isAtk)
                 {
                     StartAtk();
+                }
+                else if (agent.remainingDistance >= 3f)
+                {
+                    agent.SetDestination(TargetTransform.Value.position);
+                    float speed = agent.velocity.magnitude;
+                    animator.SetFloat("Speed", speed * 2);
                 }
 
                 // 공격이 끝났다면 성공 상태 반환
@@ -54,10 +68,12 @@ namespace BehaviorDesigner.Runtime.Tasks
                     MeleeAtk.isAtk = false;
                     return TaskStatus.Success;
                 }
+
                 // 공격 중이면 Running 상태 유지
                 return TaskStatus.Running;
             }
-            return TaskStatus.Running;
+            else
+                return TaskStatus.Failure;
         }
 
         // 공격 시작
@@ -68,6 +84,9 @@ namespace BehaviorDesigner.Runtime.Tasks
             attackFinished = false; // 공격 완료 상태 초기화
             MeleeAtk.isAtk = true;
             animator.SetTrigger("ATK");
+            //agent.SetDestination(TargetTransform.Value.position);
+            //float speed = agent.velocity.magnitude;
+            //animator.SetFloat("Speed", speed * 2);
             StartCoroutine(EndAtkk());
             // 애니메이션 이벤트로 EndAtk 호출
         }

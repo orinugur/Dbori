@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.AI;
 namespace BehaviorDesigner.Runtime.Tasks
 {
@@ -5,10 +6,11 @@ namespace BehaviorDesigner.Runtime.Tasks
     {
         public NavMeshAgent agent;
         public SharedTransform TargetTransform;
+        public Animator animator;
 
         public override void OnStart()
         {
-            
+
             agent = GetComponent<NavMeshAgent>();
         }
 
@@ -19,6 +21,8 @@ namespace BehaviorDesigner.Runtime.Tasks
             if (agent != null)
             {
                 agent.SetDestination(TargetTransform.Value.position);
+                float speed = agent.velocity.magnitude;
+                animator.SetFloat("Speed", speed * 2);
                 if (agent.remainingDistance < 3f)
                 {
                     // 공격 가능 범위

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class AniEvent_Cooker : MonoBehaviour
 {
+    public GameObject meleeWeapon;
     // Start is called before the first frame update
     void EndATK()
     {
@@ -13,8 +14,16 @@ public class AniEvent_Cooker : MonoBehaviour
         {
             attackTask.EndAtk(); // EndAtk »£√‚
         }
-    }
 
+    }
+    public void Weapon()
+    {
+        if(meleeWeapon != null)
+        {
+            meleeWeapon.SetActive(true);
+        }
+        
+    }
 
 
 }

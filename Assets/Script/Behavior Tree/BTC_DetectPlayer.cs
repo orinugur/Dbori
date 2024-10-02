@@ -12,6 +12,7 @@ namespace BehaviorDesigner.Runtime.Tasks
         public SharedTransform TargetTransform;
         private bool isAwakeAnimationPlayed = false; // 애니메이션 재생 여부 체크
         public Animator animator;
+        public GameObject Melee;
         public override void OnStart()
         {
             animator.SetTrigger("Saving");
@@ -29,15 +30,21 @@ namespace BehaviorDesigner.Runtime.Tasks
                 foreach (var hit in hits)
                 {
                     Debug.Log("DP1");
-                    if (hit.CompareTag("Player") || hit.CompareTag("Enemy"))
+                    if (((1 << hit.gameObject.layer) & TargetLayerMask) != 0)
                     {
                         TargetTransform.Value = hit.transform;
 
                         // 애니메이션 트리거 설정
-                        animator.SetTrigger("Awake");
-                        isAwakeAnimationPlayed = true; // 애니메이션 재생 상태 설정
-
-                        return TaskStatus.Running; // 성공 상태로 반환하지 않고 대기
+                        if (!Melee.activeSelf)
+                        {
+                            animator.SetTrigger("Awake");
+                            isAwakeAnimationPlayed = true; // 애니메이션 재생 상태 설정
+                            return TaskStatus.Running; // 성공 상태로 반환하지 않고 대기
+                        }
+                        else
+                        {
+                            return TaskStatus.Success;
+                        }
                     }
                 }
                 return TaskStatus.Running; // 타겟이 없으면 대기
@@ -50,6 +57,7 @@ namespace BehaviorDesigner.Runtime.Tasks
                 {
 
                     return TaskStatus.Success; // 성공 반환
+
                 }
                 Debug.Log("Awake 애니메이션 재생 중...");
             }
