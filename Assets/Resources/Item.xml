@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Item>
+  <dataCategory>
+    <data DataClassName="Item_SpaceStone" Name="SpaceStone" Desc="테서렉트" Price="10000" Usable="0" />
+    <data DataClassName="Item_GoldBar" Name="GoldBar" Desc="던질수있을거같다" Price="500" Usable="0" />
+    <data DataClassName="Item_Cube" Name="Cube" Desc="발판이 되어줄수도" Price="200" Usable="0" />
+    <data DataClassName="ogu2" Name="ogu2" Desc="아주귀엽다" Price="100000" Usable="0" />
+    <data DataClassName="Item_RealityStone" Name="RealityStone" Desc="에테르" Price="10000" Usable="0" />
+    <data DataClassName="Item_NightVision" Name="NightVision" Desc="적과아이템의 위치파악가능" Price="5000" Usable="1" />
+    <data DataClassName="Item_Dog" Name="Dog" Desc="기절했다" Price="1000" Usable="0" />
+    <data DataClassName="Item_Tabaco" Name="Tabaco" Desc="체력이증가한다" Price="4500" Usable="1" />
+  </dataCategory>
+</Item>

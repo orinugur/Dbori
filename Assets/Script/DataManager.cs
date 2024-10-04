@@ -20,7 +20,8 @@ public class DataManager : Singleton<DataManager>
     public DataManager()
     {
 #if DEBUG
-        _dataRootPath = "C:/Users/KGA/Desktop/DataParser";
+        _dataRootPath = $"{Application.dataPath}/Resources";
+        //_dataRootPath = "C:/Users/KGA/Desktop/DataParser";
 #else
         _dataRootPath = $"{Application.dataPath}/Resources";
 #endif
