@@ -73,6 +73,7 @@ namespace BehaviorDesigner.Runtime.Tasks
                 return TaskStatus.Running;
             }
             else
+                animator.ResetTrigger("ATK");
                 return TaskStatus.Failure;
         }
 

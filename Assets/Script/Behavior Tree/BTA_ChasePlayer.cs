@@ -16,8 +16,11 @@ namespace BehaviorDesigner.Runtime.Tasks
 
         public override TaskStatus OnUpdate()
         {
-            if (TargetTransform.Value == null) return TaskStatus.Failure;
-
+            if (TargetTransform.Value == null)
+            {
+                animator.ResetTrigger("ATK");
+                return TaskStatus.Failure;
+            }
             if (agent != null)
             {
                 agent.SetDestination(TargetTransform.Value.position);

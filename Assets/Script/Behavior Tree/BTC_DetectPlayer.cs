@@ -3,25 +3,33 @@ using UnityEngine;
 
 namespace BehaviorDesigner.Runtime.Tasks
 {
-
     public class BTC_DetectPlayer : Conditional
     {
         public float detectionRadius;
         public LayerMask TargetLayerMask;
-        //private Transform TargetTransform;
         public SharedTransform TargetTransform;
-        private bool isAwakeAnimationPlayed = false; // 애니메이션 재생 여부 체크
+        private bool isAwakeAnimationPlayed = false;
+        private bool isWeapon = false;
+        private bool isCoroutineCompleted = false; // 코루틴 완료 여부 체크
         public Animator animator;
         public GameObject Melee;
+
         public override void OnStart()
         {
             animator.SetTrigger("Saving");
-                                isAwakeAnimationPlayed = false; // 상태 초기화
+            isAwakeAnimationPlayed = false;
+            isCoroutineCompleted = false; // 코루틴 완료 여부 초기화
+
+            if (Melee.activeSelf)
+            {
+                isWeapon = true;
+            }
         }
+
         public override TaskStatus OnUpdate()
         {
-
             Debug.Log("DP");
+
             // 타겟이 없으면 탐지 로직 실행
             if (TargetTransform.Value == null)
             {
@@ -35,44 +43,42 @@ namespace BehaviorDesigner.Runtime.Tasks
                         TargetTransform.Value = hit.transform;
 
                         // 애니메이션 트리거 설정
-                        if (!Melee.activeSelf)
+                        if (!Melee.activeSelf && !isAwakeAnimationPlayed)
                         {
                             animator.SetTrigger("Awake");
-                            isAwakeAnimationPlayed = true; // 애니메이션 재생 상태 설정
-                            return TaskStatus.Running; // 성공 상태로 반환하지 않고 대기
+                            isAwakeAnimationPlayed = true;
+                            StartCoroutine(awake()); // 코루틴 시작
+                            return TaskStatus.Running;
                         }
-                        else
+                        else if (Melee.activeSelf)
                         {
+                            isCoroutineCompleted= true;
+                            isWeapon = true;
                             return TaskStatus.Success;
                         }
                     }
                 }
-                return TaskStatus.Running; // 타겟이 없으면 대기
+                //return TaskStatus.Running;
             }
-            else if (isAwakeAnimationPlayed)
+
+            if (isCoroutineCompleted && isWeapon)
             {
-                var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-
-                if (!stateInfo.IsName("Awake")) // Awake 상태가 아니면 Success 반환
-                {
-
-                    return TaskStatus.Success; // 성공 반환
-
-                }
-                Debug.Log("Awake 애니메이션 재생 중...");
+                return TaskStatus.Success; // 코루틴 완료 후에 Success 반환
             }
-            //else if(!isAwakeAnimationPlayed&&TargetTransform.Value!=null)
-            //{
-            //    return TaskStatus.Success; // 성공 반환
-            //}
-            return TaskStatus.Running; // 진행 중이면 계속 대기
+
+            return TaskStatus.Running; // 코루틴이 완료될 때까지 대기
         }
 
-        IEnumerator awake()
+        private IEnumerator awake()
         {
-            yield return new WaitForSecondsRealtime(1f);
+            //yield return new WaitForSecondsRealtime(3f);
+            yield return new WaitForSeconds(3f);
+            //if (Melee.activeSelf)
+            //{
+                isWeapon = true;
+            //}
+            Debug.Log("weaponawake");
+            isCoroutineCompleted = true; // 코루틴 완료 플래그 설정
         }
     }
-    
-
 }
