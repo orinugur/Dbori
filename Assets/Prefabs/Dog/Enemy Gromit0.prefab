@@ -1270,7 +1270,7 @@ MonoBehaviour:
   MeleeAtk: {fileID: 576505231282880267}
   atkEp: {fileID: 2356567709738632944}
   speed: 0
-  detectionRadius: 10
+  detectionRadius: 15
   targetLayerMask:
     serializedVersion: 2
     m_Bits: 2056
